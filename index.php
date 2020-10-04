@@ -2,6 +2,7 @@
 
 require_once('./observer/Monitor.php');
 require_once('./strategy/DuckSimulator.php');
+require_once('./decorator/Counter.php');
 
 function run($program)
 {
@@ -17,8 +18,12 @@ function run($program)
             $monitor = new Monitor();
             $monitor->execute();
             echo "</br>";
+        case 'decorator':
+            echo "Running decorator example</br></br>";
+            $counter = new Counter();
+            $counter->execute();
+            echo "</br>";
     }
 }
 
-run('strategy');
-run('observer');
+run('decorator');
