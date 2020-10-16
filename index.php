@@ -1,5 +1,6 @@
 <?php
 
+require_once('./utils/Output.php');
 require_once('./observer/Monitor.php');
 require_once('./strategy/DuckSimulator.php');
 require_once('./decorator/Counter.php');
@@ -8,21 +9,21 @@ function run($program)
 {
     switch ($program) {
         case 'strategy':
-            echo "Running strategy example</br></br>";
+            renderln("Running strategu example</br>");
             $duckSimulator = new DuckSimulator();
             $duckSimulator->execute();
-            echo "</br>";
+            renderln();
         break;
         case 'observer':
-            echo "Running observer example</br></br>";
+            renderln("Running observer example</br>");
             $monitor = new Monitor();
             $monitor->execute();
-            echo "</br>";
+            renderln();
         case 'decorator':
-            echo "Running decorator example</br></br>";
+            renderln("Running decorator example</br>");
             $counter = new Counter();
             $counter->execute();
-            echo "</br>";
+            renderln();
     }
 }
 
