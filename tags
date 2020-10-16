@@ -18,7 +18,9 @@ IFlyBehavior	strategy/IFlyBehavior.php	/^interface IFlyBehavior$/;"	i
 IQuackBehavior	strategy/IQuackBehavior.php	/^interface IQuackBehavior$/;"	i
 ISR	decorator/ISR.php	/^class ISR extends TaxDecorator$/;"	c
 IVA	decorator/IVA.php	/^class IVA extends TaxDecorator$/;"	c
+ItalianToy	factory/models/ItalianToy.php	/^class ItalianToy extends Toy$/;"	c
 MallardDuck	strategy/MallardDuck.php	/^class MallardDuck extends Duck$/;"	c
+MexicanToy	factory/models/MexicanToy.php	/^class MexicanToy extends Toy$/;"	c
 ModelDuck	strategy/ModelDuck.php	/^class ModelDuck extends Duck$/;"	c
 Monitor	observer/Monitor.php	/^class Monitor$/;"	c
 NoFly	strategy/NoFly.php	/^class NoFly implements IFlyBehavior$/;"	c
@@ -29,13 +31,20 @@ Observable	observer/Observable.php	/^interface Observable$/;"	i
 Observer	observer/Observer.php	/^interface Observer$/;"	i
 Product	decorator/Product.php	/^abstract class Product$/;"	c
 Squeak	strategy/Squeak.php	/^class Squeak implements IQuackBehavior$/;"	c
+Store	factory/Store.php	/^abstract class Store$/;"	c
 TaxDecorator	decorator/TaxDecorator.php	/^abstract class TaxDecorator extends Product$/;"	c
+Toy	factory/models/Toy.php	/^abstract class Toy$/;"	c
+Workshop	factory/Workshop.php	/^abstract class Workshop$/;"	c
 __construct	decorator/ConcreteProduct.php	/^    public function __construct(string $name, float $price, int $stock, string $description = ""/;"	f	class:ConcreteProduct
 __construct	decorator/TaxDecorator.php	/^    public function __construct(Product $product)$/;"	f	class:TaxDecorator
+__construct	factory/models/ItalianToy.php	/^    public function __construct(string $name = 'Italian toy', float $price = 17.5, array $parts /;"	f	class:ItalianToy
+__construct	factory/models/MexicanToy.php	/^    public function __construct(string $name = 'Mexican toy', float $price = 27.5, array $parts /;"	f	class:MexicanToy
 __construct	observer/ConcreteObserver.php	/^    public function __construct(string $name, ConcreteObservable $observable)$/;"	f	class:ConcreteObserver
 __construct	strategy/MallardDuck.php	/^    public function __construct()$/;"	f	class:MallardDuck
 __construct	strategy/ModelDuck.php	/^    public function __construct()$/;"	f	class:ModelDuck
 addTax	decorator/Counter.php	/^    private function addTax(string $type, Product $wrappee)$/;"	f	class:Counter
+assembly	factory/Workshop.php	/^    public function assembly($parts): string$/;"	f	class:Workshop	typeref:unknown:string
+craft	factory/Workshop.php	/^    public function craft(string $type): string$/;"	f	class:Workshop	typeref:unknown:string
 description	decorator/Product.php	/^    protected $description = "";$/;"	v	class:Product
 display	strategy/Duck.php	/^    public abstract function display(): void;$/;"	f	class:Duck	typeref:unknown:void
 display	strategy/MallardDuck.php	/^    public function display(): void$/;"	f	class:MallardDuck	typeref:unknown:void
@@ -49,20 +58,28 @@ fly	strategy/IFlyBehavior.php	/^    public function fly(): string;$/;"	f	interfa
 fly	strategy/NoFly.php	/^    public function fly(): string$/;"	f	class:NoFly	typeref:unknown:string
 fly	strategy/NormalFly.php	/^    public function fly(): string$/;"	f	class:NormalFly	typeref:unknown:string
 flyBehavior	strategy/Duck.php	/^    protected $flyBehavior;$/;"	v	class:Duck
+getDefaultParts	factory/models/Toy.php	/^    public function getDefaultParts(): array$/;"	f	class:Toy	typeref:unknown:array
 getDescription	decorator/Product.php	/^    public function getDescription(): string$/;"	f	class:Product	typeref:unknown:string
 getName	decorator/Product.php	/^    public function getName(): string$/;"	f	class:Product	typeref:unknown:string
+getName	factory/models/Toy.php	/^    public function getName(): string$/;"	f	class:Toy	typeref:unknown:string
+getParts	factory/models/Toy.php	/^    public function getParts(): array$/;"	f	class:Toy	typeref:unknown:array
 getPrice	decorator/Product.php	/^    public function getPrice(): float$/;"	f	class:Product	typeref:unknown:float
+getPrice	factory/models/Toy.php	/^    public function getPrice(): float$/;"	f	class:Toy	typeref:unknown:float
 getState	observer/ConcreteObservable.php	/^    public function getState(): int$/;"	f	class:ConcreteObservable	typeref:unknown:int
 getStock	decorator/Product.php	/^    public function getStock(): int$/;"	f	class:Product	typeref:unknown:int
+getToy	factory/Workshop.php	/^    public abstract function getToy($type): Toy;$/;"	f	class:Workshop	typeref:unknown:Toy
 name	decorator/Product.php	/^    protected $name = "";$/;"	v	class:Product
+name	factory/models/Toy.php	/^    protected $name;$/;"	v	class:Toy
 name	observer/ConcreteObserver.php	/^    protected $name = '';$/;"	v	class:ConcreteObserver
 notifyObservers	observer/ConcreteObservable.php	/^    public function notifyObservers(): void$/;"	f	class:ConcreteObservable	typeref:unknown:void
 notifyObservers	observer/Observable.php	/^    public function notifyObservers(): void;$/;"	f	interface:Observable	typeref:unknown:void
 observable	observer/ConcreteObserver.php	/^    protected $observable = null;$/;"	v	class:ConcreteObserver
 observers	observer/ConcreteObservable.php	/^    protected $observers = [];$/;"	v	class:ConcreteObservable
+parts	factory/models/Toy.php	/^    protected $parts;$/;"	v	class:Toy
 performFly	strategy/Duck.php	/^    public function performFly(): void$/;"	f	class:Duck	typeref:unknown:void
 performQuack	strategy/Duck.php	/^    public function performQuack(): void$/;"	f	class:Duck	typeref:unknown:void
 price	decorator/Product.php	/^    protected $price = 0.0;$/;"	v	class:Product
+price	factory/models/Toy.php	/^    protected $price;$/;"	v	class:Toy
 println	observer/Monitor.php	/^    public function println($message)$/;"	f	class:Monitor
 productFactory	decorator/Counter.php	/^    private function productFactory(string $type): ConcreteProduct$/;"	f	class:Counter	typeref:unknown:ConcreteProduct
 quack	strategy/IQuackBehavior.php	/^    public function quack(): string;$/;"	f	interface:IQuackBehavior	typeref:unknown:string
@@ -79,7 +96,10 @@ run	index.php	/^function run($program)$/;"	f
 setDescription	decorator/Product.php	/^    public function setDescription($description): void$/;"	f	class:Product	typeref:unknown:void
 setFlyBehavior	strategy/Duck.php	/^    public function setFlyBehavior(IFlyBehavior $flyBehavior): void$/;"	f	class:Duck	typeref:unknown:void
 setName	decorator/Product.php	/^    public function setName(string $name): void$/;"	f	class:Product	typeref:unknown:void
+setName	factory/models/Toy.php	/^    public function setName(string $name): void$/;"	f	class:Toy	typeref:unknown:void
+setParts	factory/models/Toy.php	/^    public function setParts(array $parts): void$/;"	f	class:Toy	typeref:unknown:void
 setPrice	decorator/Product.php	/^    public function setPrice($price): void$/;"	f	class:Product	typeref:unknown:void
+setPrice	factory/models/Toy.php	/^    public function setPrice(float $price): void$/;"	f	class:Toy	typeref:unknown:void
 setQuackBehavior	strategy/Duck.php	/^    public function setQuackBehavior(IQuackBehavior $quackBehavior): void$/;"	f	class:Duck	typeref:unknown:void
 setState	observer/ConcreteObservable.php	/^    public function setState(int $value): void$/;"	f	class:ConcreteObservable	typeref:unknown:void
 setStock	decorator/Product.php	/^    public function setStock($stock): void$/;"	f	class:Product	typeref:unknown:void
