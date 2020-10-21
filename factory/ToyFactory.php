@@ -18,5 +18,5 @@ abstract class ToyFactory
         }, '');
     }
 
-    public abstract function getToy($type): Toy;
+    public abstract function getToy(string $type): Toy;
 }
