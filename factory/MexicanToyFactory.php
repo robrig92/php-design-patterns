@@ -8,7 +8,7 @@ class MexicanToyFactory extends ToyFactory
 {
     public function getToy($type): Toy
     {
-        switch ($type) {
+        switch ($type)) {
             case 'wrestler':
                 return new MexicanToy('Luchador', 56);
                 // No break
