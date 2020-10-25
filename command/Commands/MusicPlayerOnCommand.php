@@ -1,7 +1,7 @@
 <?php
 
 require_once(__DIR__ . '/Command.php');
-require_once(__DIR__ . '/../../Models/MusicPlayer.php');
+require_once(__DIR__ . '/../Models/MusicPlayer.php');
 
 class MusicPlayerOnController implements Command
 {
@@ -14,7 +14,7 @@ class MusicPlayerOnController implements Command
 
     public function execute(): void
     {
-        $this->musicPlater->setVolume(10);
+        $this->musicPlayer->setVolume(10);
         $this->musicPlayer->play();
     }
 }

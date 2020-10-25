@@ -1,7 +1,7 @@
 <?php
 
 require_once(__DIR__ . '/Command.php');
-require_once(__DIR__ . '/../../Models/RGBLight.php');
+require_once(__DIR__ . '/../Models/RGBLight.php');
 
 class RGBLightOnCommand implements Command
 {

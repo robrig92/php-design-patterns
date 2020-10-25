@@ -1,7 +1,7 @@
 <?php
 
 require_once(__DIR__ . '/Command.php');
-require_once(__DIR__ . '/../../Models/AlertSubscription.php');
+require_once(__DIR__ . '/../Models/AlertSubscription.php');
 
 class AlertSubscriptionOffCommand implements Command
 {

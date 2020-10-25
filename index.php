@@ -1,10 +1,11 @@
 <?php
 
 require_once('./utils/Output.php');
-require_once('./observer/Monitor.php');
-require_once('./strategy/DuckSimulator.php');
-require_once('./decorator/Counter.php');
 require_once('./factory/Store.php');
+require_once('./command/Stream.php');
+require_once('./observer/Monitor.php');
+require_once('./decorator/Counter.php');
+require_once('./strategy/DuckSimulator.php');
 require_once('./singleton/SingletonApp.php');
 
 function run($program)
@@ -40,7 +41,12 @@ function run($program)
             $loggerApp->execute();
             renderln();
             break;
+        case 'command':
+            renderln("Running command</br>");
+            $commandApp = new Stream();
+            $commandApp->execute();
+            break;
     }
 }
 
-run('singleton');
+run('command');

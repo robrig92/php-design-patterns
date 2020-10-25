@@ -3,7 +3,7 @@
 require_once(__DIR__ . '/Commands/Command.php');
 require_once(__DIR__ . '/Commands/NoCommand.php');
 
-class SreamingController
+class StreamingController
 {
     protected $onCommands;
     protected $offCommands;
@@ -27,11 +27,11 @@ class SreamingController
 
     public function buttonOnPressed(int $slot): void
     {
-        $this->onCommands[$slot].execute();
+        $this->onCommands[$slot]->execute();
     }
 
     public function buttonOffPressed(int $slot): void
     {
-        $this->offCommands[$slot].execute();
+        $this->offCommands[$slot]->execute();
     }
 }

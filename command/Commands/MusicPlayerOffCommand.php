@@ -1,7 +1,7 @@
 <?php
 
 require_once(__DIR__ . '/Command.php');
-require_once(__DIR__ . '/../../Models/MusicPlayer.php');
+require_once(__DIR__ . '/../Models/MusicPlayer.php');
 
 class MusicPlayerOffController implements Command
 {
