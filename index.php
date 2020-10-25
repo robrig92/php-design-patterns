@@ -5,6 +5,7 @@ require_once('./observer/Monitor.php');
 require_once('./strategy/DuckSimulator.php');
 require_once('./decorator/Counter.php');
 require_once('./factory/Store.php');
+require_once('./singleton/SingletonApp.php');
 
 function run($program)
 {
@@ -33,7 +34,13 @@ function run($program)
             $counter->execute();
             renderln();
             break;
+        case 'singleton':
+            renderln('Running singleton</br>');
+            $loggerApp = new SingletongApp();
+            $loggerApp->execute();
+            renderln();
+            break;
     }
 }
 
-run('factory');
+run('singleton');
