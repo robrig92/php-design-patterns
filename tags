@@ -19,8 +19,10 @@ IQuackBehavior	strategy/IQuackBehavior.php	/^interface IQuackBehavior$/;"	i
 ISR	decorator/ISR.php	/^class ISR extends TaxDecorator$/;"	c
 IVA	decorator/IVA.php	/^class IVA extends TaxDecorator$/;"	c
 ItalianToy	factory/models/ItalianToy.php	/^class ItalianToy extends Toy$/;"	c
+ItalianToyFactory	factory/ItalianToyFactory.php	/^class ItalianToyFactory extends ToyFactory$/;"	c
 MallardDuck	strategy/MallardDuck.php	/^class MallardDuck extends Duck$/;"	c
 MexicanToy	factory/models/MexicanToy.php	/^class MexicanToy extends Toy$/;"	c
+MexicanToyFactory	factory/MexicanToyFactory.php	/^class MexicanToyFactory extends ToyFactory$/;"	c
 ModelDuck	strategy/ModelDuck.php	/^class ModelDuck extends Duck$/;"	c
 Monitor	observer/Monitor.php	/^class Monitor$/;"	c
 NoFly	strategy/NoFly.php	/^class NoFly implements IFlyBehavior$/;"	c
@@ -31,10 +33,10 @@ Observable	observer/Observable.php	/^interface Observable$/;"	i
 Observer	observer/Observer.php	/^interface Observer$/;"	i
 Product	decorator/Product.php	/^abstract class Product$/;"	c
 Squeak	strategy/Squeak.php	/^class Squeak implements IQuackBehavior$/;"	c
-Store	factory/Store.php	/^abstract class Store$/;"	c
+Store	factory/Store.php	/^class Store$/;"	c
 TaxDecorator	decorator/TaxDecorator.php	/^abstract class TaxDecorator extends Product$/;"	c
 Toy	factory/models/Toy.php	/^abstract class Toy$/;"	c
-Workshop	factory/Workshop.php	/^abstract class Workshop$/;"	c
+ToyFactory	factory/ToyFactory.php	/^abstract class ToyFactory$/;"	c
 __construct	decorator/ConcreteProduct.php	/^    public function __construct(string $name, float $price, int $stock, string $description = ""/;"	f	class:ConcreteProduct
 __construct	decorator/TaxDecorator.php	/^    public function __construct(Product $product)$/;"	f	class:TaxDecorator
 __construct	factory/models/ItalianToy.php	/^    public function __construct(string $name = 'Italian toy', float $price = 17.5, array $parts /;"	f	class:ItalianToy
@@ -43,14 +45,15 @@ __construct	observer/ConcreteObserver.php	/^    public function __construct(stri
 __construct	strategy/MallardDuck.php	/^    public function __construct()$/;"	f	class:MallardDuck
 __construct	strategy/ModelDuck.php	/^    public function __construct()$/;"	f	class:ModelDuck
 addTax	decorator/Counter.php	/^    private function addTax(string $type, Product $wrappee)$/;"	f	class:Counter
-assembly	factory/Workshop.php	/^    public function assembly($parts): string$/;"	f	class:Workshop	typeref:unknown:string
-craft	factory/Workshop.php	/^    public function craft(string $type): string$/;"	f	class:Workshop	typeref:unknown:string
+assembly	factory/ToyFactory.php	/^    public function assembly($parts): string$/;"	f	class:ToyFactory	typeref:unknown:string
+craft	factory/ToyFactory.php	/^    public function craft(string $type): string$/;"	f	class:ToyFactory	typeref:unknown:string
 description	decorator/Product.php	/^    protected $description = "";$/;"	v	class:Product
 display	strategy/Duck.php	/^    public abstract function display(): void;$/;"	f	class:Duck	typeref:unknown:void
 display	strategy/MallardDuck.php	/^    public function display(): void$/;"	f	class:MallardDuck	typeref:unknown:void
 display	strategy/ModelDuck.php	/^    public function display(): void$/;"	f	class:ModelDuck	typeref:unknown:void
 duckFactory	strategy/DuckSimulator.php	/^    protected function duckFactory($type)$/;"	f	class:DuckSimulator
 execute	decorator/Counter.php	/^    public function execute()$/;"	f	class:Counter
+execute	factory/Store.php	/^    public function execute()$/;"	f	class:Store
 execute	observer/Monitor.php	/^    public function execute()$/;"	f	class:Monitor
 execute	strategy/DuckSimulator.php	/^    public function execute()$/;"	f	class:DuckSimulator
 fly	strategy/FlyWithRocket.php	/^    public function fly(): string$/;"	f	class:FlyWIthRocket	typeref:unknown:string
@@ -67,7 +70,9 @@ getPrice	decorator/Product.php	/^    public function getPrice(): float$/;"	f	cla
 getPrice	factory/models/Toy.php	/^    public function getPrice(): float$/;"	f	class:Toy	typeref:unknown:float
 getState	observer/ConcreteObservable.php	/^    public function getState(): int$/;"	f	class:ConcreteObservable	typeref:unknown:int
 getStock	decorator/Product.php	/^    public function getStock(): int$/;"	f	class:Product	typeref:unknown:int
-getToy	factory/Workshop.php	/^    public abstract function getToy($type): Toy;$/;"	f	class:Workshop	typeref:unknown:Toy
+getToy	factory/ItalianToyFactory.php	/^    public function getToy(string $type): Toy$/;"	f	class:ItalianToyFactory	typeref:unknown:Toy
+getToy	factory/MexicanToyFactory.php	/^    public function getToy($type): Toy$/;"	f	class:MexicanToyFactory	typeref:unknown:Toy
+getToy	factory/ToyFactory.php	/^    public abstract function getToy(string $type): Toy;$/;"	f	class:ToyFactory	typeref:unknown:Toy
 name	decorator/Product.php	/^    protected $name = "";$/;"	v	class:Product
 name	factory/models/Toy.php	/^    protected $name;$/;"	v	class:Toy
 name	observer/ConcreteObserver.php	/^    protected $name = '';$/;"	v	class:ConcreteObserver
