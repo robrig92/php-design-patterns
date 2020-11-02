@@ -10,6 +10,7 @@
 AlertSubscription	command/Models/AlertSubscription.php	/^class AlertSubscription$/;"	c
 AlertSubscriptionOffCommand	command/Commands/AlertSubscriptionOffCommand.php	/^class AlertSubscriptionOffCommand implements Command$/;"	c
 AlertSubscriptionOnCommand	command/Commands/AlertSubscriptionOnCommand.php	/^class AlertSubscriptionOnCommand implements Command$/;"	c
+CD	adapter/Models/CD.php	/^class CD$/;"	c
 Command	command/Commands/Command.php	/^interface Command$/;"	i
 ConcreteObservable	observer/ConcreteObservable.php	/^class ConcreteObservable implements Observable$/;"	c
 ConcreteObserver	observer/ConcreteObserver.php	/^class ConcreteObserver implements Observer$/;"	c
@@ -52,6 +53,7 @@ StreamingController	command/StreamingController.php	/^class StreamingController$
 TaxDecorator	decorator/TaxDecorator.php	/^abstract class TaxDecorator extends Product$/;"	c
 Toy	factory/models/Toy.php	/^abstract class Toy$/;"	c
 ToyFactory	factory/ToyFactory.php	/^abstract class ToyFactory$/;"	c
+__construct	adapter/Models/CD.php	/^    public function __construct(string $name, float $duration, array $songs)$/;"	f	class:CD
 __construct	command/Commands/AlertSubscriptionOffCommand.php	/^    public function __construct(AlertSubscription $alertSubscription)$/;"	f	class:AlertSubscriptionOffCommand
 __construct	command/Commands/AlertSubscriptionOnCommand.php	/^    public function __construct(AlertSubscription $alertSubscription)$/;"	f	class:AlertSubscriptionOnCommand
 __construct	command/Commands/MusicPlayerOffCommand.php	/^    public function __construct(MusicPlayer $musicPlayer)$/;"	f	class:MusicPlayerOffController
@@ -81,6 +83,7 @@ display	strategy/Duck.php	/^    public abstract function display(): void;$/;"	f	
 display	strategy/MallardDuck.php	/^    public function display(): void$/;"	f	class:MallardDuck	typeref:unknown:void
 display	strategy/ModelDuck.php	/^    public function display(): void$/;"	f	class:ModelDuck	typeref:unknown:void
 duckFactory	strategy/DuckSimulator.php	/^    protected function duckFactory($type)$/;"	f	class:DuckSimulator
+duration	adapter/Models/CD.php	/^    private $duration;$/;"	v	class:CD
 execute	command/Commands/AlertSubscriptionOffCommand.php	/^    public function execute(): void$/;"	f	class:AlertSubscriptionOffCommand	typeref:unknown:void
 execute	command/Commands/AlertSubscriptionOnCommand.php	/^    public function execute(): void$/;"	f	class:AlertSubscriptionOnCommand	typeref:unknown:void
 execute	command/Commands/Command.php	/^    public function execute(): void;$/;"	f	interface:Command	typeref:unknown:void
@@ -103,12 +106,15 @@ flyBehavior	strategy/Duck.php	/^    protected $flyBehavior;$/;"	v	class:Duck
 getColor	command/Models/RGBLight.php	/^    public function getColor(): string$/;"	f	class:RGBLight	typeref:unknown:string
 getDefaultParts	factory/models/Toy.php	/^    public function getDefaultParts(): array$/;"	f	class:Toy	typeref:unknown:array
 getDescription	decorator/Product.php	/^    public function getDescription(): string$/;"	f	class:Product	typeref:unknown:string
+getDuration	adapter/Models/CD.php	/^    public function getDuration()$/;"	f	class:CD
 getInstance	singleton/Logger.php	/^    public static function getInstance() {$/;"	f	class:Logger
+getName	adapter/Models/CD.php	/^    public function getName()$/;"	f	class:CD
 getName	decorator/Product.php	/^    public function getName(): string$/;"	f	class:Product	typeref:unknown:string
 getName	factory/models/Toy.php	/^    public function getName(): string$/;"	f	class:Toy	typeref:unknown:string
 getParts	factory/models/Toy.php	/^    public function getParts(): array$/;"	f	class:Toy	typeref:unknown:array
 getPrice	decorator/Product.php	/^    public function getPrice(): float$/;"	f	class:Product	typeref:unknown:float
 getPrice	factory/models/Toy.php	/^    public function getPrice(): float$/;"	f	class:Toy	typeref:unknown:float
+getSongs	adapter/Models/CD.php	/^    public function getSongs()$/;"	f	class:CD
 getState	observer/ConcreteObservable.php	/^    public function getState(): int$/;"	f	class:ConcreteObservable	typeref:unknown:int
 getStock	decorator/Product.php	/^    public function getStock(): int$/;"	f	class:Product	typeref:unknown:int
 getToy	factory/ItalianToyFactory.php	/^    public function getToy(string $type): Toy$/;"	f	class:ItalianToyFactory	typeref:unknown:Toy
@@ -120,6 +126,7 @@ light	command/Commands/RGBLightOffCommand.php	/^    protected $light;$/;"	v	clas
 light	command/Commands/RGBLigthOnCommand.php	/^    protected $light;$/;"	v	class:RGBLightOnCommand
 musicPlayer	command/Commands/MusicPlayerOffCommand.php	/^    protected $musicPlayer;$/;"	v	class:MusicPlayerOffController
 musicPlayer	command/Commands/MusicPlayerOnCommand.php	/^    protected $musicPlayer;$/;"	v	class:MusicPlayerOnController
+name	adapter/Models/CD.php	/^    private $name;$/;"	v	class:CD
 name	decorator/Product.php	/^    protected $name = "";$/;"	v	class:Product
 name	factory/models/Toy.php	/^    protected $name;$/;"	v	class:Toy
 name	observer/ConcreteObserver.php	/^    protected $name = '';$/;"	v	class:ConcreteObserver
@@ -136,6 +143,7 @@ onCommands	command/StreamingController.php	/^    protected $onCommands;$/;"	v	cl
 parts	factory/models/Toy.php	/^    protected $parts;$/;"	v	class:Toy
 performFly	strategy/Duck.php	/^    public function performFly(): void$/;"	f	class:Duck	typeref:unknown:void
 performQuack	strategy/Duck.php	/^    public function performQuack(): void$/;"	f	class:Duck	typeref:unknown:void
+play	adapter/Models/CD.php	/^    public function play(int $number)$/;"	f	class:CD
 play	command/Models/MusicPlayer.php	/^    public function play(): void$/;"	f	class:MusicPlayer	typeref:unknown:void
 price	decorator/Product.php	/^    protected $price = 0.0;$/;"	v	class:Product
 price	factory/models/Toy.php	/^    protected $price;$/;"	v	class:Toy
@@ -165,6 +173,7 @@ setQuackBehavior	strategy/Duck.php	/^    public function setQuackBehavior(IQuack
 setState	observer/ConcreteObservable.php	/^    public function setState(int $value): void$/;"	f	class:ConcreteObservable	typeref:unknown:void
 setStock	decorator/Product.php	/^    public function setStock($stock): void$/;"	f	class:Product	typeref:unknown:void
 setVolume	command/Models/MusicPlayer.php	/^    public function setVolume(int $volume): void$/;"	f	class:MusicPlayer	typeref:unknown:void
+songs	adapter/Models/CD.php	/^    private $songs;$/;"	v	class:CD
 stock	decorator/Product.php	/^    protected $stock = 0;$/;"	v	class:Product
 stop	command/Models/MusicPlayer.php	/^    public function stop(): void$/;"	f	class:MusicPlayer	typeref:unknown:void
 swim	strategy/Duck.php	/^    public function swim(): void$/;"	f	class:Duck	typeref:unknown:void
