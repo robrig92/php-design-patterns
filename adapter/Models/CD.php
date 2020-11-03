@@ -1,5 +1,7 @@
 <?php
 
+require_once(__DIR__ . '/../../utils/Output.php');
+
 class CD
 {
     private $name;
@@ -9,7 +11,7 @@ class CD
     public function __construct(string $name, float $duration, array $songs)
     {
         $this->name = $name;
-        $this->songs =$songs;
+        $this->songs = $songs;
         $this->duration = $duration;
     }
 
