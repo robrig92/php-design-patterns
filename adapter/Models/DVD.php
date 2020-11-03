@@ -8,7 +8,7 @@ class DVD
     private $length;
     private $tracks;
 
-    public function __constructor(string $label, float $length, SplFixedArray $tracks)
+    public function __constructor(string $label, string $length, SplFixedArray $tracks)
     {
         $this->label = $label;
         $this->length = $length;

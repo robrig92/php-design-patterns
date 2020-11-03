@@ -8,7 +8,7 @@ class CD
     private $duration;
     private $songs;
 
-    public function __construct(string $name, float $duration, array $songs)
+    public function __construct(string $name, string $duration, array $songs)
     {
         $this->name = $name;
         $this->songs = $songs;
