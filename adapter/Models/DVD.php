@@ -8,7 +8,7 @@ class DVD
     private $length;
     private $tracks;
 
-    public function __constructor(string $label, string $length, SplFixedArray $tracks)
+    public function __construct(string $label, string $length, SplFixedArray $tracks)
     {
         $this->label = $label;
         $this->length = $length;
@@ -33,11 +33,20 @@ class DVD
     public function reproduce(int $number)
     {
         for (
-            $this->tracks->rewind(), $count = 0;
+            $this->tracks->rewind(), $count = 1;
             $this->tracks->valid() && $count < $number;
-            $this->tracks->next()
+            $this->tracks->next(), $count++
         );
 
         renderln("Current song playing {$this->tracks->current()}");
+    }
+
+    public function __toString()
+    {
+        $tracks = $this->tracks->toArray();
+
+        return array_reduce($tracks, function ($text, $track) {
+            return "$text $track</br>";
+        }, '');
     }
 }

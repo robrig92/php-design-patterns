@@ -34,4 +34,11 @@ class CD
     {
         renderln("Playing {$this->songs[$number]}");
     }
+
+    public function __toString()
+    {
+        return array_reduce($this->songs, function ($text, $song) {
+            return "$text $song</br>";
+        }, '');
+    }
 }

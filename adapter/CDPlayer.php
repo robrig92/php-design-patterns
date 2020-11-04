@@ -1,14 +1,39 @@
 <?php
 
-require_once(__DIR__ . '/CD.php');
-require_once(__DIR__ . '/DVD.php');
+require_once(__DIR__ . '/Models/CD.php');
+require_once(__DIR__ . '/Models/DVD.php');
+require_once(__DIR__ . '/../utils/Output.php');
+require_once(__DIR__ . '/Adapters/DVDAdapter.php');
 
 class CDPlayer
 {
     public function execute()
     {
         $cd = $this->getCd();
+        $this->renderCd($cd);
+
         $dvd = $this->getDvd();
+        $dvdAdapter = new DVDAdapter($dvd);
+        $this->renderCd($dvdAdapter);
+
+        $cd->play(2);
+        $dvdAdapter->play(3);
+    }
+
+    private function renderCd($cd)
+    {
+        renderln("CD: {$cd->getName()}");
+        renderln("Songs:");
+        $this->renderSongs($cd->getSongs());
+        renderln("Duration: {$cd->getDuration()}");
+        renderln();
+    }
+
+    private function renderSongs($songs)
+    {
+        foreach ($songs as $song) {
+            renderln($song);
+        }
     }
 
     private function getCd()

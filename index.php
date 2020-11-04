@@ -3,6 +3,7 @@
 require_once('./utils/Output.php');
 require_once('./factory/Store.php');
 require_once('./command/Stream.php');
+require_once('./adapter/CDPlayer.php');
 require_once('./observer/Monitor.php');
 require_once('./decorator/Counter.php');
 require_once('./strategy/DuckSimulator.php');
@@ -46,7 +47,12 @@ function run($program)
             $commandApp = new Stream();
             $commandApp->execute();
             break;
+        case 'adapter':
+            renderln("Running adapter</br>");
+            $adapterApp = new CDPlayer();
+            $adapterApp->execute();
+            break;
     }
 }
 
-run('command');
+run('adapter');
