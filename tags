@@ -7,17 +7,23 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/b743975/
+0	.vscode/launch.json	/^        {$/;"	o	array:configurations
+1	.vscode/launch.json	/^        {$/;"	o	array:configurations
 AlertSubscription	command/Models/AlertSubscription.php	/^class AlertSubscription$/;"	c
 AlertSubscriptionOffCommand	command/Commands/AlertSubscriptionOffCommand.php	/^class AlertSubscriptionOffCommand implements Command$/;"	c
 AlertSubscriptionOnCommand	command/Commands/AlertSubscriptionOnCommand.php	/^class AlertSubscriptionOnCommand implements Command$/;"	c
 CD	adapter/Models/CD.php	/^class CD$/;"	c
+CDPlayer	adapter/CDPlayer.php	/^class CDPlayer$/;"	c
 Command	command/Commands/Command.php	/^interface Command$/;"	i
 ConcreteObservable	observer/ConcreteObservable.php	/^class ConcreteObservable implements Observable$/;"	c
 ConcreteObserver	observer/ConcreteObserver.php	/^class ConcreteObserver implements Observer$/;"	c
 ConcreteProduct	decorator/ConcreteProduct.php	/^class ConcreteProduct extends Product$/;"	c
 Counter	decorator/Counter.php	/^class Counter$/;"	c
+DVD	adapter/Models/DVD.php	/^class DVD$/;"	c
+DVDAdapter	adapter/Adapters/DVDAdapter.php	/^class DVDAdapter extends CD$/;"	c
 Duck	strategy/Duck.php	/^abstract class Duck$/;"	c
 DuckSimulator	strategy/DuckSimulator.php	/^class DuckSimulator$/;"	c
+EmptyState	state/states/EmptyState.php	/^class EmptyState implements StateInterface$/;"	c
 FlyWIthRocket	strategy/FlyWithRocket.php	/^class FlyWIthRocket implements IFlyBehavior$/;"	c
 IFlyBehavior	strategy/IFlyBehavior.php	/^interface IFlyBehavior$/;"	i
 IQuackBehavior	strategy/IQuackBehavior.php	/^interface IQuackBehavior$/;"	i
@@ -45,15 +51,23 @@ Product	decorator/Product.php	/^abstract class Product$/;"	c
 RGBLight	command/Models/RGBLight.php	/^class RGBLight$/;"	c
 RGBLightOffCommand	command/Commands/RGBLightOffCommand.php	/^class RGBLightOffCommand implements Command$/;"	c
 RGBLightOnCommand	command/Commands/RGBLigthOnCommand.php	/^class RGBLightOnCommand implements Command$/;"	c
+RinseState	state/states/RinseState.php	/^class RinseState implements StateInterface$/;"	c
 SingletongApp	singleton/SingletonApp.php	/^class SingletongApp$/;"	c
 Squeak	strategy/Squeak.php	/^class Squeak implements IQuackBehavior$/;"	c
+StateInterface	state/states/StateInterface.php	/^interface StateInterface$/;"	i
 Store	factory/Store.php	/^class Store$/;"	c
 Stream	command/Stream.php	/^class Stream$/;"	c
 StreamingController	command/StreamingController.php	/^class StreamingController$/;"	c
 TaxDecorator	decorator/TaxDecorator.php	/^abstract class TaxDecorator extends Product$/;"	c
 Toy	factory/models/Toy.php	/^abstract class Toy$/;"	c
 ToyFactory	factory/ToyFactory.php	/^abstract class ToyFactory$/;"	c
-__construct	adapter/Models/CD.php	/^    public function __construct(string $name, float $duration, array $songs)$/;"	f	class:CD
+WashState	state/states/WashState.php	/^class WashState implements StateInterface$/;"	c
+WashedState	state/states/WashedState.php	/^class WashedState implements StateInterface$/;"	c
+Washer	state/Washer.php	/^class Washer$/;"	c
+WashingStore	state/WashingStore.php	/^class WashingStore$/;"	c
+__construct	adapter/Adapters/DVDAdapter.php	/^    public function __construct($dvd)$/;"	f	class:DVDAdapter
+__construct	adapter/Models/CD.php	/^    public function __construct(string $name, string $duration, array $songs)$/;"	f	class:CD
+__construct	adapter/Models/DVD.php	/^    public function __construct(string $label, string $length, SplFixedArray $tracks)$/;"	f	class:DVD
 __construct	command/Commands/AlertSubscriptionOffCommand.php	/^    public function __construct(AlertSubscription $alertSubscription)$/;"	f	class:AlertSubscriptionOffCommand
 __construct	command/Commands/AlertSubscriptionOnCommand.php	/^    public function __construct(AlertSubscription $alertSubscription)$/;"	f	class:AlertSubscriptionOnCommand
 __construct	command/Commands/MusicPlayerOffCommand.php	/^    public function __construct(MusicPlayer $musicPlayer)$/;"	f	class:MusicPlayerOffController
@@ -67,9 +81,17 @@ __construct	decorator/TaxDecorator.php	/^    public function __construct(Product
 __construct	factory/models/ItalianToy.php	/^    public function __construct(string $name = 'Italian toy', float $price = 17.5, array $parts /;"	f	class:ItalianToy
 __construct	factory/models/MexicanToy.php	/^    public function __construct(string $name = 'Mexican toy', float $price = 27.5, array $parts /;"	f	class:MexicanToy
 __construct	observer/ConcreteObserver.php	/^    public function __construct(string $name, ConcreteObservable $observable)$/;"	f	class:ConcreteObserver
+__construct	state/Washer.php	/^    public function __construct()$/;"	f	class:Washer
+__construct	state/states/EmptyState.php	/^    public function __construct($washer)$/;"	f	class:EmptyState
+__construct	state/states/RinseState.php	/^    public function __construct($washer)$/;"	f	class:RinseState
+__construct	state/states/WashState.php	/^    public function __construct($washer)$/;"	f	class:WashState
+__construct	state/states/WashedState.php	/^    public function __construct($washer)$/;"	f	class:WashedState
 __construct	strategy/MallardDuck.php	/^    public function __construct()$/;"	f	class:MallardDuck
 __construct	strategy/ModelDuck.php	/^    public function __construct()$/;"	f	class:ModelDuck
 __constructor	singleton/Logger.php	/^    private function __constructor() {}$/;"	f	class:Logger
+__toString	adapter/Adapters/DVDAdapter.php	/^    public function __toString()$/;"	f	class:DVDAdapter
+__toString	adapter/Models/CD.php	/^    public function __toString()$/;"	f	class:CD
+__toString	adapter/Models/DVD.php	/^    public function __toString()$/;"	f	class:DVD
 addTax	decorator/Counter.php	/^    private function addTax(string $type, Product $wrappee)$/;"	f	class:Counter
 alertSubscription	command/Commands/AlertSubscriptionOffCommand.php	/^    protected $alertSubscription;$/;"	v	class:AlertSubscriptionOffCommand
 alertSubscription	command/Commands/AlertSubscriptionOnCommand.php	/^    protected $alertSubscription;$/;"	v	class:AlertSubscriptionOnCommand
@@ -77,13 +99,25 @@ assembly	factory/ToyFactory.php	/^    public function assembly($parts): string$/
 buttonOffPressed	command/StreamingController.php	/^    public function buttonOffPressed(int $slot): void$/;"	f	class:StreamingController	typeref:unknown:void
 buttonOnPressed	command/StreamingController.php	/^    public function buttonOnPressed(int $slot): void$/;"	f	class:StreamingController	typeref:unknown:void
 color	command/Models/RGBLight.php	/^    protected $color;$/;"	v	class:RGBLight
+configurations	.vscode/launch.json	/^    "configurations": [$/;"	a
 craft	factory/ToyFactory.php	/^    public function craft(string $type): string$/;"	f	class:ToyFactory	typeref:unknown:string
+currentState	state/Washer.php	/^    private $currentState;$/;"	v	class:Washer
+cwd	.vscode/launch.json	/^            "cwd": "${fileDirname}",$/;"	s	object:configurations.1
 description	decorator/Product.php	/^    protected $description = "";$/;"	v	class:Product
 display	strategy/Duck.php	/^    public abstract function display(): void;$/;"	f	class:Duck	typeref:unknown:void
 display	strategy/MallardDuck.php	/^    public function display(): void$/;"	f	class:MallardDuck	typeref:unknown:void
 display	strategy/ModelDuck.php	/^    public function display(): void$/;"	f	class:ModelDuck	typeref:unknown:void
+dropWater	state/Washer.php	/^    public function dropWater()$/;"	f	class:Washer
+dropWater	state/states/EmptyState.php	/^    public function dropWater()$/;"	f	class:EmptyState
+dropWater	state/states/RinseState.php	/^    public function dropWater()$/;"	f	class:RinseState
+dropWater	state/states/StateInterface.php	/^    public function dropWater();$/;"	f	interface:StateInterface
+dropWater	state/states/WashState.php	/^    public function dropWater()$/;"	f	class:WashState
+dropWater	state/states/WashedState.php	/^    public function dropWater()$/;"	f	class:WashedState
 duckFactory	strategy/DuckSimulator.php	/^    protected function duckFactory($type)$/;"	f	class:DuckSimulator
 duration	adapter/Models/CD.php	/^    private $duration;$/;"	v	class:CD
+dvd	adapter/Adapters/DVDAdapter.php	/^    private $dvd;$/;"	v	class:DVDAdapter
+emptyState	state/Washer.php	/^    private $emptyState;$/;"	v	class:Washer
+execute	adapter/CDPlayer.php	/^    public function execute()$/;"	f	class:CDPlayer
 execute	command/Commands/AlertSubscriptionOffCommand.php	/^    public function execute(): void$/;"	f	class:AlertSubscriptionOffCommand	typeref:unknown:void
 execute	command/Commands/AlertSubscriptionOnCommand.php	/^    public function execute(): void$/;"	f	class:AlertSubscriptionOnCommand	typeref:unknown:void
 execute	command/Commands/Command.php	/^    public function execute(): void;$/;"	f	interface:Command	typeref:unknown:void
@@ -97,35 +131,58 @@ execute	decorator/Counter.php	/^    public function execute()$/;"	f	class:Counte
 execute	factory/Store.php	/^    public function execute()$/;"	f	class:Store
 execute	observer/Monitor.php	/^    public function execute()$/;"	f	class:Monitor
 execute	singleton/SingletonApp.php	/^    public function execute()$/;"	f	class:SingletongApp
+execute	state/WashingStore.php	/^    public function execute()$/;"	f	class:WashingStore
 execute	strategy/DuckSimulator.php	/^    public function execute()$/;"	f	class:DuckSimulator
+fill	state/Washer.php	/^    public function fill()$/;"	f	class:Washer
+fill	state/states/EmptyState.php	/^    public function fill()$/;"	f	class:EmptyState
+fill	state/states/RinseState.php	/^    public function fill()$/;"	f	class:RinseState
+fill	state/states/StateInterface.php	/^    public function fill();$/;"	f	interface:StateInterface
+fill	state/states/WashState.php	/^    public function fill()$/;"	f	class:WashState
+fill	state/states/WashedState.php	/^    public function fill()$/;"	f	class:WashedState
 fly	strategy/FlyWithRocket.php	/^    public function fly(): string$/;"	f	class:FlyWIthRocket	typeref:unknown:string
 fly	strategy/IFlyBehavior.php	/^    public function fly(): string;$/;"	f	interface:IFlyBehavior	typeref:unknown:string
 fly	strategy/NoFly.php	/^    public function fly(): string$/;"	f	class:NoFly	typeref:unknown:string
 fly	strategy/NormalFly.php	/^    public function fly(): string$/;"	f	class:NormalFly	typeref:unknown:string
 flyBehavior	strategy/Duck.php	/^    protected $flyBehavior;$/;"	v	class:Duck
+getCd	adapter/CDPlayer.php	/^    private function getCd()$/;"	f	class:CDPlayer
 getColor	command/Models/RGBLight.php	/^    public function getColor(): string$/;"	f	class:RGBLight	typeref:unknown:string
 getDefaultParts	factory/models/Toy.php	/^    public function getDefaultParts(): array$/;"	f	class:Toy	typeref:unknown:array
 getDescription	decorator/Product.php	/^    public function getDescription(): string$/;"	f	class:Product	typeref:unknown:string
+getDuration	adapter/Adapters/DVDAdapter.php	/^    public function getDuration()$/;"	f	class:DVDAdapter
 getDuration	adapter/Models/CD.php	/^    public function getDuration()$/;"	f	class:CD
+getDvd	adapter/CDPlayer.php	/^    private function getDvd()$/;"	f	class:CDPlayer
+getEmptyState	state/Washer.php	/^    public function getEmptyState()$/;"	f	class:Washer
 getInstance	singleton/Logger.php	/^    public static function getInstance() {$/;"	f	class:Logger
+getLabel	adapter/Models/DVD.php	/^    public function getLabel()$/;"	f	class:DVD
+getLength	adapter/Models/DVD.php	/^    public function getLength()$/;"	f	class:DVD
+getName	adapter/Adapters/DVDAdapter.php	/^    public function getName()$/;"	f	class:DVDAdapter
 getName	adapter/Models/CD.php	/^    public function getName()$/;"	f	class:CD
 getName	decorator/Product.php	/^    public function getName(): string$/;"	f	class:Product	typeref:unknown:string
 getName	factory/models/Toy.php	/^    public function getName(): string$/;"	f	class:Toy	typeref:unknown:string
 getParts	factory/models/Toy.php	/^    public function getParts(): array$/;"	f	class:Toy	typeref:unknown:array
 getPrice	decorator/Product.php	/^    public function getPrice(): float$/;"	f	class:Product	typeref:unknown:float
 getPrice	factory/models/Toy.php	/^    public function getPrice(): float$/;"	f	class:Toy	typeref:unknown:float
+getRinseState	state/Washer.php	/^    public function getRinseState()$/;"	f	class:Washer
+getSongs	adapter/Adapters/DVDAdapter.php	/^    public function getSongs()$/;"	f	class:DVDAdapter
 getSongs	adapter/Models/CD.php	/^    public function getSongs()$/;"	f	class:CD
 getState	observer/ConcreteObservable.php	/^    public function getState(): int$/;"	f	class:ConcreteObservable	typeref:unknown:int
 getStock	decorator/Product.php	/^    public function getStock(): int$/;"	f	class:Product	typeref:unknown:int
 getToy	factory/ItalianToyFactory.php	/^    public function getToy(string $type): Toy$/;"	f	class:ItalianToyFactory	typeref:unknown:Toy
 getToy	factory/MexicanToyFactory.php	/^    public function getToy($type): Toy$/;"	f	class:MexicanToyFactory	typeref:unknown:Toy
 getToy	factory/ToyFactory.php	/^    public abstract function getToy(string $type): Toy;$/;"	f	class:ToyFactory	typeref:unknown:Toy
+getTracks	adapter/Models/DVD.php	/^    public function getTracks()$/;"	f	class:DVD
 getVolume	command/Models/MusicPlayer.php	/^    public function getVolume(): int$/;"	f	class:MusicPlayer	typeref:unknown:int
+getWashState	state/Washer.php	/^    public function getWashState()$/;"	f	class:Washer
+getWashedState	state/Washer.php	/^    public function getWashedState()$/;"	f	class:Washer
 instance	singleton/Logger.php	/^    private static $instance;$/;"	v	class:Logger
+label	adapter/Models/DVD.php	/^    private $label;$/;"	v	class:DVD
+length	adapter/Models/DVD.php	/^    private $length;$/;"	v	class:DVD
 light	command/Commands/RGBLightOffCommand.php	/^    protected $light;$/;"	v	class:RGBLightOffCommand
 light	command/Commands/RGBLigthOnCommand.php	/^    protected $light;$/;"	v	class:RGBLightOnCommand
 musicPlayer	command/Commands/MusicPlayerOffCommand.php	/^    protected $musicPlayer;$/;"	v	class:MusicPlayerOffController
 musicPlayer	command/Commands/MusicPlayerOnCommand.php	/^    protected $musicPlayer;$/;"	v	class:MusicPlayerOnController
+name	.vscode/launch.json	/^            "name": "Launch currently open script",$/;"	s	object:configurations.1
+name	.vscode/launch.json	/^            "name": "Listen for XDebug",$/;"	s	object:configurations.0
 name	adapter/Models/CD.php	/^    private $name;$/;"	v	class:CD
 name	decorator/Product.php	/^    protected $name = "";$/;"	v	class:Product
 name	factory/models/Toy.php	/^    protected $name;$/;"	v	class:Toy
@@ -143,12 +200,16 @@ onCommands	command/StreamingController.php	/^    protected $onCommands;$/;"	v	cl
 parts	factory/models/Toy.php	/^    protected $parts;$/;"	v	class:Toy
 performFly	strategy/Duck.php	/^    public function performFly(): void$/;"	f	class:Duck	typeref:unknown:void
 performQuack	strategy/Duck.php	/^    public function performQuack(): void$/;"	f	class:Duck	typeref:unknown:void
+play	adapter/Adapters/DVDAdapter.php	/^    public function play(int $number)$/;"	f	class:DVDAdapter
 play	adapter/Models/CD.php	/^    public function play(int $number)$/;"	f	class:CD
 play	command/Models/MusicPlayer.php	/^    public function play(): void$/;"	f	class:MusicPlayer	typeref:unknown:void
+port	.vscode/launch.json	/^            "port": 9000$/;"	n	object:configurations.0
+port	.vscode/launch.json	/^            "port": 9000$/;"	n	object:configurations.1
 price	decorator/Product.php	/^    protected $price = 0.0;$/;"	v	class:Product
 price	factory/models/Toy.php	/^    protected $price;$/;"	v	class:Toy
 println	observer/Monitor.php	/^    public function println($message)$/;"	f	class:Monitor
 productFactory	decorator/Counter.php	/^    private function productFactory(string $type): ConcreteProduct$/;"	f	class:Counter	typeref:unknown:ConcreteProduct
+program	.vscode/launch.json	/^            "program": "${file}",$/;"	s	object:configurations.1
 quack	strategy/IQuackBehavior.php	/^    public function quack(): string;$/;"	f	interface:IQuackBehavior	typeref:unknown:string
 quack	strategy/NoQuack.php	/^    public function quack(): string$/;"	f	class:NoQuack	typeref:unknown:string
 quack	strategy/NormalQuack.php	/^    public function quack(): string$/;"	f	class:NormalQuack	typeref:unknown:string
@@ -158,7 +219,13 @@ registerObserver	observer/ConcreteObservable.php	/^    public function registerO
 registerObserver	observer/Observable.php	/^    public function registerObserver(Observer $observer): void;$/;"	f	interface:Observable	typeref:unknown:void
 removeObserver	observer/ConcreteObservable.php	/^    public function removeObserver(Observer $observer): void$/;"	f	class:ConcreteObservable	typeref:unknown:void
 removeObserver	observer/Observable.php	/^    public function removeObserver(Observer $observer): void;$/;"	f	interface:Observable	typeref:unknown:void
+renderCd	adapter/CDPlayer.php	/^    private function renderCd($cd)$/;"	f	class:CDPlayer
+renderSongs	adapter/CDPlayer.php	/^    private function renderSongs($songs)$/;"	f	class:CDPlayer
 renderln	utils/Output.php	/^function renderln(string $message = "")$/;"	f
+reproduce	adapter/Models/DVD.php	/^    public function reproduce(int $number)$/;"	f	class:DVD
+request	.vscode/launch.json	/^            "request": "launch",$/;"	s	object:configurations.0
+request	.vscode/launch.json	/^            "request": "launch",$/;"	s	object:configurations.1
+rinseState	state/Washer.php	/^    private $rinseState;$/;"	v	class:Washer
 run	index.php	/^function run($program)$/;"	f
 setColor	command/Models/RGBLight.php	/^    public function setColor(string $color): void$/;"	f	class:RGBLight	typeref:unknown:void
 setCommand	command/StreamingController.php	/^    public function setCommand(int $slot, Command $onCommand, Command $offCommand): void$/;"	f	class:StreamingController	typeref:unknown:void
@@ -171,20 +238,36 @@ setPrice	decorator/Product.php	/^    public function setPrice($price): void$/;"	
 setPrice	factory/models/Toy.php	/^    public function setPrice(float $price): void$/;"	f	class:Toy	typeref:unknown:void
 setQuackBehavior	strategy/Duck.php	/^    public function setQuackBehavior(IQuackBehavior $quackBehavior): void$/;"	f	class:Duck	typeref:unknown:void
 setState	observer/ConcreteObservable.php	/^    public function setState(int $value): void$/;"	f	class:ConcreteObservable	typeref:unknown:void
+setState	state/Washer.php	/^    public function setState($state)$/;"	f	class:Washer
 setStock	decorator/Product.php	/^    public function setStock($stock): void$/;"	f	class:Product	typeref:unknown:void
 setVolume	command/Models/MusicPlayer.php	/^    public function setVolume(int $volume): void$/;"	f	class:MusicPlayer	typeref:unknown:void
 songs	adapter/Models/CD.php	/^    private $songs;$/;"	v	class:CD
 stock	decorator/Product.php	/^    protected $stock = 0;$/;"	v	class:Product
 stop	command/Models/MusicPlayer.php	/^    public function stop(): void$/;"	f	class:MusicPlayer	typeref:unknown:void
+stop	state/Washer.php	/^    public function stop()$/;"	f	class:Washer
+stop	state/states/EmptyState.php	/^    public function stop()$/;"	f	class:EmptyState
+stop	state/states/RinseState.php	/^    public function stop()$/;"	f	class:RinseState
+stop	state/states/StateInterface.php	/^    public function stop();$/;"	f	interface:StateInterface
+stop	state/states/WashState.php	/^    public function stop()$/;"	f	class:WashState
+stop	state/states/WashedState.php	/^    public function stop()$/;"	f	class:WashedState
 swim	strategy/Duck.php	/^    public function swim(): void$/;"	f	class:Duck	typeref:unknown:void
 total	decorator/ConcreteProduct.php	/^    public function total(int $quantity): float$/;"	f	class:ConcreteProduct	typeref:unknown:float
 total	decorator/ISR.php	/^    public function total(int $quantity): float$/;"	f	class:ISR	typeref:unknown:float
 total	decorator/IVA.php	/^    public function total(int $quantity): float$/;"	f	class:IVA	typeref:unknown:float
 total	decorator/Product.php	/^    public abstract function total(int $quantity): float;$/;"	f	class:Product	typeref:unknown:float
 total	decorator/TaxDecorator.php	/^    public abstract function total(int $quantity): float;$/;"	f	class:TaxDecorator	typeref:unknown:float
+tracks	adapter/Models/DVD.php	/^    private $tracks;$/;"	v	class:DVD
+type	.vscode/launch.json	/^            "type": "php",$/;"	s	object:configurations.0
+type	.vscode/launch.json	/^            "type": "php",$/;"	s	object:configurations.1
 update	observer/ConcreteObserver.php	/^    public function update(): void$/;"	f	class:ConcreteObserver	typeref:unknown:void
 update	observer/Observer.php	/^    public function update(): void;$/;"	f	interface:Observer	typeref:unknown:void
 value	observer/ConcreteObservable.php	/^    protected $value = 0;$/;"	v	class:ConcreteObservable
 volume	command/Models/MusicPlayer.php	/^    protected $volume;$/;"	v	class:MusicPlayer
+washState	state/Washer.php	/^    private $washState;$/;"	v	class:Washer
+washedState	state/Washer.php	/^    private $washedState;$/;"	v	class:Washer
+washer	state/states/EmptyState.php	/^    private $washer;$/;"	v	class:EmptyState
+washer	state/states/RinseState.php	/^    private $washer;$/;"	v	class:RinseState
+washer	state/states/WashState.php	/^    private $washer;$/;"	v	class:WashState
+washer	state/states/WashedState.php	/^    private $washer;$/;"	v	class:WashedState
 wrapped	decorator/TaxDecorator.php	/^    protected $wrapped = null;$/;"	v	class:TaxDecorator
 write	singleton/Logger.php	/^    public function write(string $message)$/;"	f	class:Logger

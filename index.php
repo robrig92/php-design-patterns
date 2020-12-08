@@ -6,6 +6,7 @@ require_once('./command/Stream.php');
 require_once('./adapter/CDPlayer.php');
 require_once('./observer/Monitor.php');
 require_once('./decorator/Counter.php');
+require_once('./state/WashingStore.php');
 require_once('./strategy/DuckSimulator.php');
 require_once('./singleton/SingletonApp.php');
 
@@ -52,7 +53,12 @@ function run($program)
             $adapterApp = new CDPlayer();
             $adapterApp->execute();
             break;
+        case 'state':
+            renderln("Running state</br>");
+            $stateApp = new WashingStore();
+            $stateApp->execute();
+            break;
     }
 }
 
-run('adapter');
+run('state');
