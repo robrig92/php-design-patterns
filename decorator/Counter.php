@@ -4,10 +4,11 @@ require_once(__DIR__ . '/IVA.php');
 require_once(__DIR__ . '/ISR.php');
 require_once(__DIR__ . '/../utils/Output.php');
 require_once(__DIR__ . '/ConcreteProduct.php');
+require_once(__DIR__ . '/../ApplicationInterface.php');
 
-class Counter
+class Counter implements ApplicationInterface
 {
-    public function execute()
+    public function execute(): void
     {
         $tv = $this->productFactory('tv');
         $playstation = $this->productFactory('playstation 4');

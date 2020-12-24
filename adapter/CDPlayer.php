@@ -4,10 +4,11 @@ require_once(__DIR__ . '/Models/CD.php');
 require_once(__DIR__ . '/Models/DVD.php');
 require_once(__DIR__ . '/../utils/Output.php');
 require_once(__DIR__ . '/Adapters/DVDAdapter.php');
+require_once(__DIR__ . '/../ApplicationInterface.php');
 
-class CDPlayer
+class CDPlayer implements ApplicationInterface
 {
-    public function execute()
+    public function execute(): void
     {
         $cd = $this->getCd();
         $this->renderCd($cd);

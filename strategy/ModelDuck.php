@@ -1,5 +1,6 @@
 <?php
 
+require_once(__DIR__ . '/Duck.php');
 require_once(__DIR__ . '/NoFly.php');
 require_once(__DIR__ . '/NoQuack.php');
 

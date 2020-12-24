@@ -7,58 +7,47 @@ require_once('./adapter/CDPlayer.php');
 require_once('./observer/Monitor.php');
 require_once('./decorator/Counter.php');
 require_once('./state/WashingStore.php');
+require_once('./ApplicationInterface.php');
 require_once('./strategy/DuckSimulator.php');
 require_once('./singleton/SingletonApp.php');
 
-function run($program)
+function getApplication($program): ApplicationInterface
 {
     switch ($program) {
         case 'strategy':
             renderln("Running strategu example</br>");
-            $duckSimulator = new DuckSimulator();
-            $duckSimulator->execute();
-            renderln();
-            break;
+            return new DuckSimulator();
+            // No break
         case 'observer':
             renderln("Running observer example</br>");
-            $monitor = new Monitor();
-            $monitor->execute();
-            renderln();
-            break;
+            return new Monitor();
+            // No break
         case 'decorator':
             renderln("Running decorator example</br>");
-            $counter = new Counter();
-            $counter->execute();
-            renderln();
-            break;
+            return new Counter();
+            // No break
         case 'factory':
             renderln("Running factory example</br>");
-            $counter = new Store();
-            $counter->execute();
-            renderln();
-            break;
+            return new Store();
+            // No break
         case 'singleton':
             renderln('Running singleton</br>');
-            $loggerApp = new SingletongApp();
-            $loggerApp->execute();
-            renderln();
-            break;
+            return new SingletongApp();
+            // No break
         case 'command':
             renderln("Running command</br>");
-            $commandApp = new Stream();
-            $commandApp->execute();
-            break;
+            return new Stream();
+            // No break
         case 'adapter':
             renderln("Running adapter</br>");
-            $adapterApp = new CDPlayer();
-            $adapterApp->execute();
-            break;
+            return new CDPlayer();
+            // No break
         case 'state':
             renderln("Running state</br>");
-            $stateApp = new WashingStore();
-            $stateApp->execute();
-            break;
+            return new WashingStore();
+            // No break
     }
 }
 
-run('state');
+$application = getApplication('state');
+$application->execute();

@@ -1,12 +1,13 @@
 <?php
 
-require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/strategy/MallardDuck.php');
 require_once(__DIR__ . '/ModelDuck.php');
 require_once(__DIR__ . '/FlyWithRocket.php');
+require_once(__DIR__ . '/MallardDuck.php');
+require_once(__DIR__ . '/../ApplicationInterface.php');
 
-class DuckSimulator
+class DuckSimulator implements ApplicationInterface
 {
-    public function execute()
+    public function execute(): void
     {
         echo "Starting the simulator</br>";
 

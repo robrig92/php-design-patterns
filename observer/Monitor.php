@@ -2,10 +2,11 @@
 
 require_once(__DIR__ . '/ConcreteObserver.php');
 require_once(__DIR__ . '/ConcreteObservable.php');
+require_once(__DIR__ . '/../ApplicationInterface.php');
 
-class Monitor
+class Monitor implements ApplicationInterface
 {
-    public function execute()
+    public function execute(): void
     {
         $this->println("Creating Observer");
         $observable = new ConcreteObservable();

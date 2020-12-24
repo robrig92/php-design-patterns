@@ -12,17 +12,18 @@
 AlertSubscription	command/Models/AlertSubscription.php	/^class AlertSubscription$/;"	c
 AlertSubscriptionOffCommand	command/Commands/AlertSubscriptionOffCommand.php	/^class AlertSubscriptionOffCommand implements Command$/;"	c
 AlertSubscriptionOnCommand	command/Commands/AlertSubscriptionOnCommand.php	/^class AlertSubscriptionOnCommand implements Command$/;"	c
+ApplicationInterface	ApplicationInterface.php	/^interface ApplicationInterface$/;"	i
 CD	adapter/Models/CD.php	/^class CD$/;"	c
-CDPlayer	adapter/CDPlayer.php	/^class CDPlayer$/;"	c
+CDPlayer	adapter/CDPlayer.php	/^class CDPlayer implements ApplicationInterface$/;"	c
 Command	command/Commands/Command.php	/^interface Command$/;"	i
 ConcreteObservable	observer/ConcreteObservable.php	/^class ConcreteObservable implements Observable$/;"	c
 ConcreteObserver	observer/ConcreteObserver.php	/^class ConcreteObserver implements Observer$/;"	c
 ConcreteProduct	decorator/ConcreteProduct.php	/^class ConcreteProduct extends Product$/;"	c
-Counter	decorator/Counter.php	/^class Counter$/;"	c
+Counter	decorator/Counter.php	/^class Counter implements ApplicationInterface$/;"	c
 DVD	adapter/Models/DVD.php	/^class DVD$/;"	c
 DVDAdapter	adapter/Adapters/DVDAdapter.php	/^class DVDAdapter extends CD$/;"	c
 Duck	strategy/Duck.php	/^abstract class Duck$/;"	c
-DuckSimulator	strategy/DuckSimulator.php	/^class DuckSimulator$/;"	c
+DuckSimulator	strategy/DuckSimulator.php	/^class DuckSimulator implements ApplicationInterface$/;"	c
 EmptyState	state/states/EmptyState.php	/^class EmptyState implements StateInterface$/;"	c
 FlyWIthRocket	strategy/FlyWithRocket.php	/^class FlyWIthRocket implements IFlyBehavior$/;"	c
 IFlyBehavior	strategy/IFlyBehavior.php	/^interface IFlyBehavior$/;"	i
@@ -36,7 +37,7 @@ MallardDuck	strategy/MallardDuck.php	/^class MallardDuck extends Duck$/;"	c
 MexicanToy	factory/models/MexicanToy.php	/^class MexicanToy extends Toy$/;"	c
 MexicanToyFactory	factory/MexicanToyFactory.php	/^class MexicanToyFactory extends ToyFactory$/;"	c
 ModelDuck	strategy/ModelDuck.php	/^class ModelDuck extends Duck$/;"	c
-Monitor	observer/Monitor.php	/^class Monitor$/;"	c
+Monitor	observer/Monitor.php	/^class Monitor implements ApplicationInterface$/;"	c
 MusicPlayer	command/Models/MusicPlayer.php	/^class MusicPlayer$/;"	c
 MusicPlayerOffController	command/Commands/MusicPlayerOffCommand.php	/^class MusicPlayerOffController implements Command$/;"	c
 MusicPlayerOnController	command/Commands/MusicPlayerOnCommand.php	/^class MusicPlayerOnController implements Command$/;"	c
@@ -52,11 +53,11 @@ RGBLight	command/Models/RGBLight.php	/^class RGBLight$/;"	c
 RGBLightOffCommand	command/Commands/RGBLightOffCommand.php	/^class RGBLightOffCommand implements Command$/;"	c
 RGBLightOnCommand	command/Commands/RGBLigthOnCommand.php	/^class RGBLightOnCommand implements Command$/;"	c
 RinseState	state/states/RinseState.php	/^class RinseState implements StateInterface$/;"	c
-SingletongApp	singleton/SingletonApp.php	/^class SingletongApp$/;"	c
+SingletongApp	singleton/SingletonApp.php	/^class SingletongApp implements ApplicationInterface$/;"	c
 Squeak	strategy/Squeak.php	/^class Squeak implements IQuackBehavior$/;"	c
 StateInterface	state/states/StateInterface.php	/^interface StateInterface$/;"	i
-Store	factory/Store.php	/^class Store$/;"	c
-Stream	command/Stream.php	/^class Stream$/;"	c
+Store	factory/Store.php	/^class Store implements ApplicationInterface$/;"	c
+Stream	command/Stream.php	/^class Stream implements ApplicationInterface$/;"	c
 StreamingController	command/StreamingController.php	/^class StreamingController$/;"	c
 TaxDecorator	decorator/TaxDecorator.php	/^abstract class TaxDecorator extends Product$/;"	c
 Toy	factory/models/Toy.php	/^abstract class Toy$/;"	c
@@ -64,7 +65,7 @@ ToyFactory	factory/ToyFactory.php	/^abstract class ToyFactory$/;"	c
 WashState	state/states/WashState.php	/^class WashState implements StateInterface$/;"	c
 WashedState	state/states/WashedState.php	/^class WashedState implements StateInterface$/;"	c
 Washer	state/Washer.php	/^class Washer$/;"	c
-WashingStore	state/WashingStore.php	/^class WashingStore$/;"	c
+WashingStore	state/WashingStore.php	/^class WashingStore implements ApplicationInterface$/;"	c
 __construct	adapter/Adapters/DVDAdapter.php	/^    public function __construct($dvd)$/;"	f	class:DVDAdapter
 __construct	adapter/Models/CD.php	/^    public function __construct(string $name, string $duration, array $songs)$/;"	f	class:CD
 __construct	adapter/Models/DVD.php	/^    public function __construct(string $label, string $length, SplFixedArray $tracks)$/;"	f	class:DVD
@@ -95,6 +96,7 @@ __toString	adapter/Models/DVD.php	/^    public function __toString()$/;"	f	class
 addTax	decorator/Counter.php	/^    private function addTax(string $type, Product $wrappee)$/;"	f	class:Counter
 alertSubscription	command/Commands/AlertSubscriptionOffCommand.php	/^    protected $alertSubscription;$/;"	v	class:AlertSubscriptionOffCommand
 alertSubscription	command/Commands/AlertSubscriptionOnCommand.php	/^    protected $alertSubscription;$/;"	v	class:AlertSubscriptionOnCommand
+application	index.php	/^$application = getApplication('state');$/;"	v
 assembly	factory/ToyFactory.php	/^    public function assembly($parts): string$/;"	f	class:ToyFactory	typeref:unknown:string
 buttonOffPressed	command/StreamingController.php	/^    public function buttonOffPressed(int $slot): void$/;"	f	class:StreamingController	typeref:unknown:void
 buttonOnPressed	command/StreamingController.php	/^    public function buttonOnPressed(int $slot): void$/;"	f	class:StreamingController	typeref:unknown:void
@@ -117,7 +119,8 @@ duckFactory	strategy/DuckSimulator.php	/^    protected function duckFactory($typ
 duration	adapter/Models/CD.php	/^    private $duration;$/;"	v	class:CD
 dvd	adapter/Adapters/DVDAdapter.php	/^    private $dvd;$/;"	v	class:DVDAdapter
 emptyState	state/Washer.php	/^    private $emptyState;$/;"	v	class:Washer
-execute	adapter/CDPlayer.php	/^    public function execute()$/;"	f	class:CDPlayer
+execute	ApplicationInterface.php	/^    public function execute(): void;$/;"	f	interface:ApplicationInterface	typeref:unknown:void
+execute	adapter/CDPlayer.php	/^    public function execute(): void$/;"	f	class:CDPlayer	typeref:unknown:void
 execute	command/Commands/AlertSubscriptionOffCommand.php	/^    public function execute(): void$/;"	f	class:AlertSubscriptionOffCommand	typeref:unknown:void
 execute	command/Commands/AlertSubscriptionOnCommand.php	/^    public function execute(): void$/;"	f	class:AlertSubscriptionOnCommand	typeref:unknown:void
 execute	command/Commands/Command.php	/^    public function execute(): void;$/;"	f	interface:Command	typeref:unknown:void
@@ -126,13 +129,13 @@ execute	command/Commands/MusicPlayerOnCommand.php	/^    public function execute(
 execute	command/Commands/NoCommand.php	/^    public function execute() : void {}$/;"	f	class:NoCommand	typeref:unknown:void
 execute	command/Commands/RGBLightOffCommand.php	/^    public function execute(): void$/;"	f	class:RGBLightOffCommand	typeref:unknown:void
 execute	command/Commands/RGBLigthOnCommand.php	/^    public function execute(): void$/;"	f	class:RGBLightOnCommand	typeref:unknown:void
-execute	command/Stream.php	/^    public function execute()$/;"	f	class:Stream
-execute	decorator/Counter.php	/^    public function execute()$/;"	f	class:Counter
-execute	factory/Store.php	/^    public function execute()$/;"	f	class:Store
-execute	observer/Monitor.php	/^    public function execute()$/;"	f	class:Monitor
-execute	singleton/SingletonApp.php	/^    public function execute()$/;"	f	class:SingletongApp
-execute	state/WashingStore.php	/^    public function execute()$/;"	f	class:WashingStore
-execute	strategy/DuckSimulator.php	/^    public function execute()$/;"	f	class:DuckSimulator
+execute	command/Stream.php	/^    public function execute(): void$/;"	f	class:Stream	typeref:unknown:void
+execute	decorator/Counter.php	/^    public function execute(): void$/;"	f	class:Counter	typeref:unknown:void
+execute	factory/Store.php	/^    public function execute(): void$/;"	f	class:Store	typeref:unknown:void
+execute	observer/Monitor.php	/^    public function execute(): void$/;"	f	class:Monitor	typeref:unknown:void
+execute	singleton/SingletonApp.php	/^    public function execute(): void$/;"	f	class:SingletongApp	typeref:unknown:void
+execute	state/WashingStore.php	/^    public function execute(): void$/;"	f	class:WashingStore	typeref:unknown:void
+execute	strategy/DuckSimulator.php	/^    public function execute(): void$/;"	f	class:DuckSimulator	typeref:unknown:void
 fill	state/Washer.php	/^    public function fill()$/;"	f	class:Washer
 fill	state/states/EmptyState.php	/^    public function fill()$/;"	f	class:EmptyState
 fill	state/states/RinseState.php	/^    public function fill()$/;"	f	class:RinseState
@@ -144,6 +147,7 @@ fly	strategy/IFlyBehavior.php	/^    public function fly(): string;$/;"	f	interfa
 fly	strategy/NoFly.php	/^    public function fly(): string$/;"	f	class:NoFly	typeref:unknown:string
 fly	strategy/NormalFly.php	/^    public function fly(): string$/;"	f	class:NormalFly	typeref:unknown:string
 flyBehavior	strategy/Duck.php	/^    protected $flyBehavior;$/;"	v	class:Duck
+getApplication	index.php	/^function getApplication($program): ApplicationInterface$/;"	f	typeref:unknown:ApplicationInterface
 getCd	adapter/CDPlayer.php	/^    private function getCd()$/;"	f	class:CDPlayer
 getColor	command/Models/RGBLight.php	/^    public function getColor(): string$/;"	f	class:RGBLight	typeref:unknown:string
 getDefaultParts	factory/models/Toy.php	/^    public function getDefaultParts(): array$/;"	f	class:Toy	typeref:unknown:array
@@ -226,7 +230,6 @@ reproduce	adapter/Models/DVD.php	/^    public function reproduce(int $number)$/;
 request	.vscode/launch.json	/^            "request": "launch",$/;"	s	object:configurations.0
 request	.vscode/launch.json	/^            "request": "launch",$/;"	s	object:configurations.1
 rinseState	state/Washer.php	/^    private $rinseState;$/;"	v	class:Washer
-run	index.php	/^function run($program)$/;"	f
 setColor	command/Models/RGBLight.php	/^    public function setColor(string $color): void$/;"	f	class:RGBLight	typeref:unknown:void
 setCommand	command/StreamingController.php	/^    public function setCommand(int $slot, Command $onCommand, Command $offCommand): void$/;"	f	class:StreamingController	typeref:unknown:void
 setDescription	decorator/Product.php	/^    public function setDescription($description): void$/;"	f	class:Product	typeref:unknown:void

@@ -1,10 +1,11 @@
 <?php
 
 require_once(__DIR__ . '/Logger.php');
+require_once(__DIR__ . '/../ApplicationInterface.php');
 
-class SingletongApp
+class SingletongApp implements ApplicationInterface
 {
-    public function execute()
+    public function execute(): void
     {
         $logger = Logger::getInstance();
         $logger->write('Hello world!');

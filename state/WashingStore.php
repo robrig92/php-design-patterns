@@ -1,10 +1,11 @@
 <?php
 
 require_once(__DIR__ . '/Washer.php');
+require_once(__DIR__ . '/../ApplicationInterface.php');
 
-class WashingStore
+class WashingStore implements ApplicationInterface
 {
-    public function execute()
+    public function execute(): void
     {
         $washer = new Washer();
         $washer->fill();
