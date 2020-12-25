@@ -96,7 +96,7 @@ __toString	adapter/Models/DVD.php	/^    public function __toString()$/;"	f	class
 addTax	decorator/Counter.php	/^    private function addTax(string $type, Product $wrappee)$/;"	f	class:Counter
 alertSubscription	command/Commands/AlertSubscriptionOffCommand.php	/^    protected $alertSubscription;$/;"	v	class:AlertSubscriptionOffCommand
 alertSubscription	command/Commands/AlertSubscriptionOnCommand.php	/^    protected $alertSubscription;$/;"	v	class:AlertSubscriptionOnCommand
-application	index.php	/^$application = getApplication('state');$/;"	v
+application	index.php	/^$application = getApplication($program);$/;"	v
 assembly	factory/ToyFactory.php	/^    public function assembly($parts): string$/;"	f	class:ToyFactory	typeref:unknown:string
 buttonOffPressed	command/StreamingController.php	/^    public function buttonOffPressed(int $slot): void$/;"	f	class:StreamingController	typeref:unknown:void
 buttonOnPressed	command/StreamingController.php	/^    public function buttonOnPressed(int $slot): void$/;"	f	class:StreamingController	typeref:unknown:void
@@ -214,6 +214,7 @@ price	factory/models/Toy.php	/^    protected $price;$/;"	v	class:Toy
 println	observer/Monitor.php	/^    public function println($message)$/;"	f	class:Monitor
 productFactory	decorator/Counter.php	/^    private function productFactory(string $type): ConcreteProduct$/;"	f	class:Counter	typeref:unknown:ConcreteProduct
 program	.vscode/launch.json	/^            "program": "${file}",$/;"	s	object:configurations.1
+program	index.php	/^$program = 'state';$/;"	v
 quack	strategy/IQuackBehavior.php	/^    public function quack(): string;$/;"	f	interface:IQuackBehavior	typeref:unknown:string
 quack	strategy/NoQuack.php	/^    public function quack(): string$/;"	f	class:NoQuack	typeref:unknown:string
 quack	strategy/NormalQuack.php	/^    public function quack(): string$/;"	f	class:NormalQuack	typeref:unknown:string

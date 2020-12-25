@@ -15,39 +15,33 @@ function getApplication($program): ApplicationInterface
 {
     switch ($program) {
         case 'strategy':
-            renderln("Running strategu example</br>");
             return new DuckSimulator();
             // No break
         case 'observer':
-            renderln("Running observer example</br>");
             return new Monitor();
             // No break
         case 'decorator':
-            renderln("Running decorator example</br>");
             return new Counter();
             // No break
         case 'factory':
-            renderln("Running factory example</br>");
             return new Store();
             // No break
         case 'singleton':
-            renderln('Running singleton</br>');
             return new SingletongApp();
             // No break
         case 'command':
-            renderln("Running command</br>");
             return new Stream();
             // No break
         case 'adapter':
-            renderln("Running adapter</br>");
             return new CDPlayer();
             // No break
         case 'state':
-            renderln("Running state</br>");
             return new WashingStore();
             // No break
     }
 }
 
-$application = getApplication('state');
+$program = 'state';
+$application = getApplication($program);
+renderln("Running the $program example</br>");
 $application->execute();
