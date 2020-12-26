@@ -1,6 +1,7 @@
 <?php
 
 require_once('./utils/Output.php');
+require_once('./iterator/Game.php');
 require_once('./factory/Store.php');
 require_once('./command/Stream.php');
 require_once('./adapter/CDPlayer.php');
@@ -38,10 +39,13 @@ function getApplication($program): ApplicationInterface
         case 'state':
             return new WashingStore();
             // No break
+        case 'iterator':
+            return new Game();
+            // No break
     }
 }
 
-$program = 'state';
+$program = 'iterator';
 $application = getApplication($program);
 renderln("Running the $program example</br>");
 $application->execute();
