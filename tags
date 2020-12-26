@@ -90,6 +90,7 @@ __construct	factory/models/MexicanToy.php	/^    public function __construct(stri
 __construct	iterator/Guild.php	/^    public function __construct(string $name)$/;"	f	class:Guild
 __construct	iterator/iterators/CharacterIterator.php	/^    public function __construct(array $elements)$/;"	f	class:CharacterIterator
 __construct	iterator/iterators/GuildIterator.php	/^    public function __construct(array $elements)$/;"	f	class:GuildIterator
+__construct	iterator/models/GameCharacter.php	/^    public function __construct(string $name, int $level, string $class)$/;"	f	class:GameCharacter
 __construct	observer/ConcreteObserver.php	/^    public function __construct(string $name, ConcreteObservable $observable)$/;"	f	class:ConcreteObserver
 __construct	state/Washer.php	/^    public function __construct()$/;"	f	class:Washer
 __construct	state/states/EmptyState.php	/^    public function __construct($washer)$/;"	f	class:EmptyState
@@ -99,7 +100,6 @@ __construct	state/states/WashedState.php	/^    public function __construct($wash
 __construct	strategy/MallardDuck.php	/^    public function __construct()$/;"	f	class:MallardDuck
 __construct	strategy/ModelDuck.php	/^    public function __construct()$/;"	f	class:ModelDuck
 __constructor	singleton/Logger.php	/^    private function __constructor() {}$/;"	f	class:Logger
-__contruct	iterator/models/GameCharacter.php	/^    public function __contruct(string $name, int $level, string $class)$/;"	f	class:GameCharacter
 __toString	adapter/Adapters/DVDAdapter.php	/^    public function __toString()$/;"	f	class:DVDAdapter
 __toString	adapter/Models/CD.php	/^    public function __toString()$/;"	f	class:CD
 __toString	adapter/Models/DVD.php	/^    public function __toString()$/;"	f	class:DVD
@@ -115,6 +115,8 @@ class	iterator/models/GameCharacter.php	/^    protected $class;$/;"	v	class:Game
 color	command/Models/RGBLight.php	/^    protected $color;$/;"	v	class:RGBLight
 configurations	.vscode/launch.json	/^    "configurations": [$/;"	a
 craft	factory/ToyFactory.php	/^    public function craft(string $type): string$/;"	f	class:ToyFactory	typeref:unknown:string
+craftDragonsOfHeavenGuild	iterator/Game.php	/^    protected function craftDragonsOfHeavenGuild()$/;"	f	class:Game
+craftLansGuild	iterator/Game.php	/^    protected function craftLansGuild()$/;"	f	class:Game
 createIterator	iterator/Guild.php	/^    public function createIterator()$/;"	f	class:Guild
 currentPosition	iterator/iterators/CharacterIterator.php	/^    protected $currentPosition;$/;"	v	class:CharacterIterator
 currentPosition	iterator/iterators/GuildIterator.php	/^    protected $currentPosition;$/;"	v	class:GuildIterator
