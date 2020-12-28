@@ -29,7 +29,7 @@ EmptyState	state/states/EmptyState.php	/^class EmptyState implements StateInterf
 FlyWIthRocket	strategy/FlyWithRocket.php	/^class FlyWIthRocket implements IFlyBehavior$/;"	c
 Game	iterator/Game.php	/^class Game implements ApplicationInterface$/;"	c
 GameCharacter	iterator/models/GameCharacter.php	/^class GameCharacter$/;"	c
-Guild	iterator/Guild.php	/^class Guild$/;"	c
+Guild	iterator/Guild.php	/^class Guild implements IterableInterface$/;"	c
 GuildIterator	iterator/iterators/GuildIterator.php	/^class GuildIterator implements IteratorInterface$/;"	c
 IFlyBehavior	strategy/IFlyBehavior.php	/^interface IFlyBehavior$/;"	i
 IQuackBehavior	strategy/IQuackBehavior.php	/^interface IQuackBehavior$/;"	i
@@ -37,6 +37,7 @@ ISR	decorator/ISR.php	/^class ISR extends TaxDecorator$/;"	c
 IVA	decorator/IVA.php	/^class IVA extends TaxDecorator$/;"	c
 ItalianToy	factory/models/ItalianToy.php	/^class ItalianToy extends Toy$/;"	c
 ItalianToyFactory	factory/ItalianToyFactory.php	/^class ItalianToyFactory extends ToyFactory$/;"	c
+IterableInterface	iterator/iterators/Iterable.php	/^interface IterableInterface$/;"	i
 IteratorInterface	iterator/iterators/IteratorInterface.php	/^interface IteratorInterface$/;"	i
 Logger	singleton/Logger.php	/^class Logger {$/;"	c
 MallardDuck	strategy/MallardDuck.php	/^class MallardDuck extends Duck$/;"	c
@@ -117,7 +118,8 @@ configurations	.vscode/launch.json	/^    "configurations": [$/;"	a
 craft	factory/ToyFactory.php	/^    public function craft(string $type): string$/;"	f	class:ToyFactory	typeref:unknown:string
 craftDragonsOfHeavenGuild	iterator/Game.php	/^    protected function craftDragonsOfHeavenGuild()$/;"	f	class:Game
 craftLansGuild	iterator/Game.php	/^    protected function craftLansGuild()$/;"	f	class:Game
-createIterator	iterator/Guild.php	/^    public function createIterator()$/;"	f	class:Guild
+createIterator	iterator/Guild.php	/^    public function createIterator(): IteratorInterface$/;"	f	class:Guild	typeref:unknown:IteratorInterface
+createIterator	iterator/iterators/Iterable.php	/^    public function createIterator(): IteratorInterface;$/;"	f	interface:IterableInterface	typeref:unknown:IteratorInterface
 currentPosition	iterator/iterators/CharacterIterator.php	/^    protected $currentPosition;$/;"	v	class:CharacterIterator
 currentPosition	iterator/iterators/GuildIterator.php	/^    protected $currentPosition;$/;"	v	class:GuildIterator
 currentState	state/Washer.php	/^    private $currentState;$/;"	v	class:Washer

@@ -1,8 +1,10 @@
 <?php
 
 require_once(__DIR__ . '/iterators/GuildIterator.php');
+require_once(__DIR__ . '/iterators/IteratorInterface.php');
+require_once(__DIR__ . '/iterators/IterableInterface.php');
 
-class Guild
+class Guild implements IterableInterface
 {
     protected $name;
     protected $members;
@@ -28,7 +30,7 @@ class Guild
         unset($this->members[$position]);
     }
 
-    public function createIterator()
+    public function createIterator(): IteratorInterface
     {
         return new GuildIterator($this->members);
     }
