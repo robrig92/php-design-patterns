@@ -9,6 +9,7 @@ require_once('./observer/Monitor.php');
 require_once('./decorator/Counter.php');
 require_once('./state/WashingStore.php');
 require_once('./ApplicationInterface.php');
+require_once('./composite/BrandManager.php');
 require_once('./strategy/DuckSimulator.php');
 require_once('./singleton/SingletonApp.php');
 
@@ -42,10 +43,12 @@ function getApplication($program): ApplicationInterface
         case 'iterator':
             return new Game();
             // No break
+        case 'composite':
+            return new BrandManager();
     }
 }
 
-$program = 'iterator';
+$program = 'composite';
 $application = getApplication($program);
 renderln("Running the $program example</br>");
 $application->execute();

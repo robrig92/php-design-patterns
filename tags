@@ -13,10 +13,12 @@ AlertSubscription	command/Models/AlertSubscription.php	/^class AlertSubscription
 AlertSubscriptionOffCommand	command/Commands/AlertSubscriptionOffCommand.php	/^class AlertSubscriptionOffCommand implements Command$/;"	c
 AlertSubscriptionOnCommand	command/Commands/AlertSubscriptionOnCommand.php	/^class AlertSubscriptionOnCommand implements Command$/;"	c
 ApplicationInterface	ApplicationInterface.php	/^interface ApplicationInterface$/;"	i
+BrandManager	composite/BrandManager.php	/^class BrandManager implements ApplicationInterface$/;"	c
 CD	adapter/Models/CD.php	/^class CD$/;"	c
 CDPlayer	adapter/CDPlayer.php	/^class CDPlayer implements ApplicationInterface$/;"	c
 CharacterIterator	iterator/iterators/CharacterIterator.php	/^class CharacterIterator implements IteratorInterface$/;"	c
 Command	command/Commands/Command.php	/^interface Command$/;"	i
+Component	composite/composites/Component.php	/^interface Component$/;"	i
 ConcreteObservable	observer/ConcreteObservable.php	/^class ConcreteObservable implements Observable$/;"	c
 ConcreteObserver	observer/ConcreteObserver.php	/^class ConcreteObserver implements Observer$/;"	c
 ConcreteProduct	decorator/ConcreteProduct.php	/^class ConcreteProduct extends Product$/;"	c
@@ -37,7 +39,8 @@ ISR	decorator/ISR.php	/^class ISR extends TaxDecorator$/;"	c
 IVA	decorator/IVA.php	/^class IVA extends TaxDecorator$/;"	c
 ItalianToy	factory/models/ItalianToy.php	/^class ItalianToy extends Toy$/;"	c
 ItalianToyFactory	factory/ItalianToyFactory.php	/^class ItalianToyFactory extends ToyFactory$/;"	c
-IterableInterface	iterator/iterators/Iterable.php	/^interface IterableInterface$/;"	i
+Item	composite/composites/Item.php	/^class Item implements Component$/;"	c
+IterableInterface	iterator/iterators/IterableInterface.php	/^interface IterableInterface$/;"	i
 IteratorInterface	iterator/iterators/IteratorInterface.php	/^interface IteratorInterface$/;"	i
 Logger	singleton/Logger.php	/^class Logger {$/;"	c
 MallardDuck	strategy/MallardDuck.php	/^class MallardDuck extends Duck$/;"	c
@@ -59,7 +62,9 @@ Product	decorator/Product.php	/^abstract class Product$/;"	c
 RGBLight	command/Models/RGBLight.php	/^class RGBLight$/;"	c
 RGBLightOffCommand	command/Commands/RGBLightOffCommand.php	/^class RGBLightOffCommand implements Command$/;"	c
 RGBLightOnCommand	command/Commands/RGBLigthOnCommand.php	/^class RGBLightOnCommand implements Command$/;"	c
+Restaurant	composite/models/Restaurant.php	/^class Restaurant$/;"	c
 RinseState	state/states/RinseState.php	/^class RinseState implements StateInterface$/;"	c
+Sector	composite/composites/Sector.php	/^class Sector implements Component$/;"	c
 SingletongApp	singleton/SingletonApp.php	/^class SingletongApp implements ApplicationInterface$/;"	c
 Squeak	strategy/Squeak.php	/^class Squeak implements IQuackBehavior$/;"	c
 StateInterface	state/states/StateInterface.php	/^interface StateInterface$/;"	i
@@ -84,6 +89,9 @@ __construct	command/Commands/RGBLightOffCommand.php	/^    public function __cons
 __construct	command/Commands/RGBLigthOnCommand.php	/^    public function __construct(RGBLight $light)$/;"	f	class:RGBLightOnCommand
 __construct	command/Models/RGBLight.php	/^    public function __construct()$/;"	f	class:RGBLight
 __construct	command/StreamingController.php	/^    public function __construct()$/;"	f	class:StreamingController
+__construct	composite/composites/Item.php	/^    public function __construct($component)$/;"	f	class:Item
+__construct	composite/composites/Sector.php	/^    public function __construct($components = [])$/;"	f	class:Sector
+__construct	composite/models/Restaurant.php	/^    public function __construct($name, $address, $sector)$/;"	f	class:Restaurant
 __construct	decorator/ConcreteProduct.php	/^    public function __construct(string $name, float $price, int $stock, string $description = ""/;"	f	class:ConcreteProduct
 __construct	decorator/TaxDecorator.php	/^    public function __construct(Product $product)$/;"	f	class:TaxDecorator
 __construct	factory/models/ItalianToy.php	/^    public function __construct(string $name = 'Italian toy', float $price = 17.5, array $parts /;"	f	class:ItalianToy
@@ -104,22 +112,30 @@ __constructor	singleton/Logger.php	/^    private function __constructor() {}$/;"
 __toString	adapter/Adapters/DVDAdapter.php	/^    public function __toString()$/;"	f	class:DVDAdapter
 __toString	adapter/Models/CD.php	/^    public function __toString()$/;"	f	class:CD
 __toString	adapter/Models/DVD.php	/^    public function __toString()$/;"	f	class:DVD
+__toString	composite/models/Restaurant.php	/^    public function __toString()$/;"	f	class:Restaurant
+add	composite/composites/Component.php	/^    public function add($component);$/;"	f	interface:Component
+add	composite/composites/Item.php	/^    public function add($compoment)$/;"	f	class:Item
+add	composite/composites/Sector.php	/^    public function add($component)$/;"	f	class:Sector
 addMember	iterator/Guild.php	/^    public function addMember($character)$/;"	f	class:Guild
 addTax	decorator/Counter.php	/^    private function addTax(string $type, Product $wrappee)$/;"	f	class:Counter
+address	composite/models/Restaurant.php	/^    protected $address;$/;"	v	class:Restaurant
 alertSubscription	command/Commands/AlertSubscriptionOffCommand.php	/^    protected $alertSubscription;$/;"	v	class:AlertSubscriptionOffCommand
 alertSubscription	command/Commands/AlertSubscriptionOnCommand.php	/^    protected $alertSubscription;$/;"	v	class:AlertSubscriptionOnCommand
 application	index.php	/^$application = getApplication($program);$/;"	v
 assembly	factory/ToyFactory.php	/^    public function assembly($parts): string$/;"	f	class:ToyFactory	typeref:unknown:string
 buttonOffPressed	command/StreamingController.php	/^    public function buttonOffPressed(int $slot): void$/;"	f	class:StreamingController	typeref:unknown:void
 buttonOnPressed	command/StreamingController.php	/^    public function buttonOnPressed(int $slot): void$/;"	f	class:StreamingController	typeref:unknown:void
+changeSector	composite/models/Restaurant.php	/^    public function changeSector($sector)$/;"	f	class:Restaurant
 class	iterator/models/GameCharacter.php	/^    protected $class;$/;"	v	class:GameCharacter
 color	command/Models/RGBLight.php	/^    protected $color;$/;"	v	class:RGBLight
+component	composite/composites/Item.php	/^    protected $component;$/;"	v	class:Item
+components	composite/composites/Sector.php	/^    protected $components;$/;"	v	class:Sector
 configurations	.vscode/launch.json	/^    "configurations": [$/;"	a
 craft	factory/ToyFactory.php	/^    public function craft(string $type): string$/;"	f	class:ToyFactory	typeref:unknown:string
 craftDragonsOfHeavenGuild	iterator/Game.php	/^    protected function craftDragonsOfHeavenGuild()$/;"	f	class:Game
 craftLansGuild	iterator/Game.php	/^    protected function craftLansGuild()$/;"	f	class:Game
 createIterator	iterator/Guild.php	/^    public function createIterator(): IteratorInterface$/;"	f	class:Guild	typeref:unknown:IteratorInterface
-createIterator	iterator/iterators/Iterable.php	/^    public function createIterator(): IteratorInterface;$/;"	f	interface:IterableInterface	typeref:unknown:IteratorInterface
+createIterator	iterator/iterators/IterableInterface.php	/^    public function createIterator(): IteratorInterface;$/;"	f	interface:IterableInterface	typeref:unknown:IteratorInterface
 currentPosition	iterator/iterators/CharacterIterator.php	/^    protected $currentPosition;$/;"	v	class:CharacterIterator
 currentPosition	iterator/iterators/GuildIterator.php	/^    protected $currentPosition;$/;"	v	class:GuildIterator
 currentState	state/Washer.php	/^    private $currentState;$/;"	v	class:Washer
@@ -151,6 +167,7 @@ execute	command/Commands/NoCommand.php	/^    public function execute() : void {}
 execute	command/Commands/RGBLightOffCommand.php	/^    public function execute(): void$/;"	f	class:RGBLightOffCommand	typeref:unknown:void
 execute	command/Commands/RGBLigthOnCommand.php	/^    public function execute(): void$/;"	f	class:RGBLightOnCommand	typeref:unknown:void
 execute	command/Stream.php	/^    public function execute(): void$/;"	f	class:Stream	typeref:unknown:void
+execute	composite/BrandManager.php	/^    public function execute(): void$/;"	f	class:BrandManager	typeref:unknown:void
 execute	decorator/Counter.php	/^    public function execute(): void$/;"	f	class:Counter	typeref:unknown:void
 execute	factory/Store.php	/^    public function execute(): void$/;"	f	class:Store	typeref:unknown:void
 execute	iterator/Game.php	/^    public function execute(): void$/;"	f	class:Game	typeref:unknown:void
@@ -169,8 +186,12 @@ fly	strategy/IFlyBehavior.php	/^    public function fly(): string;$/;"	f	interfa
 fly	strategy/NoFly.php	/^    public function fly(): string$/;"	f	class:NoFly	typeref:unknown:string
 fly	strategy/NormalFly.php	/^    public function fly(): string$/;"	f	class:NormalFly	typeref:unknown:string
 flyBehavior	strategy/Duck.php	/^    protected $flyBehavior;$/;"	v	class:Duck
+getAddress	composite/models/Restaurant.php	/^    public function getAddress()$/;"	f	class:Restaurant
 getApplication	index.php	/^function getApplication($program): ApplicationInterface$/;"	f	typeref:unknown:ApplicationInterface
 getCd	adapter/CDPlayer.php	/^    private function getCd()$/;"	f	class:CDPlayer
+getChild	composite/composites/Component.php	/^    public function getChild($position);$/;"	f	interface:Component
+getChild	composite/composites/Item.php	/^    public function getChild($position)$/;"	f	class:Item
+getChild	composite/composites/Sector.php	/^    public function getChild($position)$/;"	f	class:Sector
 getClass	iterator/models/GameCharacter.php	/^    public function getClass()$/;"	f	class:GameCharacter
 getColor	command/Models/RGBLight.php	/^    public function getColor(): string$/;"	f	class:RGBLight	typeref:unknown:string
 getDefaultParts	factory/models/Toy.php	/^    public function getDefaultParts(): array$/;"	f	class:Toy	typeref:unknown:array
@@ -183,8 +204,12 @@ getInstance	singleton/Logger.php	/^    public static function getInstance() {$/;
 getLabel	adapter/Models/DVD.php	/^    public function getLabel()$/;"	f	class:DVD
 getLength	adapter/Models/DVD.php	/^    public function getLength()$/;"	f	class:DVD
 getLevel	iterator/models/GameCharacter.php	/^    public function getLevel()$/;"	f	class:GameCharacter
+getLocation	composite/composites/Component.php	/^    public function getLocation();$/;"	f	interface:Component
+getLocation	composite/composites/Item.php	/^    public function getLocation()$/;"	f	class:Item
+getLocation	composite/composites/Sector.php	/^    public function getLocation()$/;"	f	class:Sector
 getName	adapter/Adapters/DVDAdapter.php	/^    public function getName()$/;"	f	class:DVDAdapter
 getName	adapter/Models/CD.php	/^    public function getName()$/;"	f	class:CD
+getName	composite/models/Restaurant.php	/^    public function getName()$/;"	f	class:Restaurant
 getName	decorator/Product.php	/^    public function getName(): string$/;"	f	class:Product	typeref:unknown:string
 getName	factory/models/Toy.php	/^    public function getName(): string$/;"	f	class:Toy	typeref:unknown:string
 getName	iterator/Guild.php	/^    public function getName()$/;"	f	class:Guild
@@ -193,6 +218,7 @@ getParts	factory/models/Toy.php	/^    public function getParts(): array$/;"	f	cl
 getPrice	decorator/Product.php	/^    public function getPrice(): float$/;"	f	class:Product	typeref:unknown:float
 getPrice	factory/models/Toy.php	/^    public function getPrice(): float$/;"	f	class:Toy	typeref:unknown:float
 getRinseState	state/Washer.php	/^    public function getRinseState()$/;"	f	class:Washer
+getSector	composite/models/Restaurant.php	/^    public function getSector()$/;"	f	class:Restaurant
 getSongs	adapter/Adapters/DVDAdapter.php	/^    public function getSongs()$/;"	f	class:DVDAdapter
 getSongs	adapter/Models/CD.php	/^    public function getSongs()$/;"	f	class:CD
 getState	observer/ConcreteObservable.php	/^    public function getState(): int$/;"	f	class:ConcreteObservable	typeref:unknown:int
@@ -219,6 +245,7 @@ musicPlayer	command/Commands/MusicPlayerOnCommand.php	/^    protected $musicPlay
 name	.vscode/launch.json	/^            "name": "Launch currently open script",$/;"	s	object:configurations.1
 name	.vscode/launch.json	/^            "name": "Listen for XDebug",$/;"	s	object:configurations.0
 name	adapter/Models/CD.php	/^    private $name;$/;"	v	class:CD
+name	composite/models/Restaurant.php	/^    protected $name;$/;"	v	class:Restaurant
 name	decorator/Product.php	/^    protected $name = "";$/;"	v	class:Product
 name	factory/models/Toy.php	/^    protected $name;$/;"	v	class:Toy
 name	iterator/Guild.php	/^    protected $name;$/;"	v	class:Guild
@@ -250,7 +277,7 @@ price	factory/models/Toy.php	/^    protected $price;$/;"	v	class:Toy
 println	observer/Monitor.php	/^    public function println($message)$/;"	f	class:Monitor
 productFactory	decorator/Counter.php	/^    private function productFactory(string $type): ConcreteProduct$/;"	f	class:Counter	typeref:unknown:ConcreteProduct
 program	.vscode/launch.json	/^            "program": "${file}",$/;"	s	object:configurations.1
-program	index.php	/^$program = 'iterator';$/;"	v
+program	index.php	/^$program = 'composite';$/;"	v
 quack	strategy/IQuackBehavior.php	/^    public function quack(): string;$/;"	f	interface:IQuackBehavior	typeref:unknown:string
 quack	strategy/NoQuack.php	/^    public function quack(): string$/;"	f	class:NoQuack	typeref:unknown:string
 quack	strategy/NormalQuack.php	/^    public function quack(): string$/;"	f	class:NormalQuack	typeref:unknown:string
@@ -258,6 +285,9 @@ quack	strategy/Squeak.php	/^    public function quack(): string$/;"	f	class:Sque
 quackBehavior	strategy/Duck.php	/^    protected $quackBehavior;$/;"	v	class:Duck
 registerObserver	observer/ConcreteObservable.php	/^    public function registerObserver(Observer $observer): void$/;"	f	class:ConcreteObservable	typeref:unknown:void
 registerObserver	observer/Observable.php	/^    public function registerObserver(Observer $observer): void;$/;"	f	interface:Observable	typeref:unknown:void
+remove	composite/composites/Component.php	/^    public function remove($position);$/;"	f	interface:Component
+remove	composite/composites/Item.php	/^    public function remove($position)$/;"	f	class:Item
+remove	composite/composites/Sector.php	/^    public function remove($position)$/;"	f	class:Sector
 removeMember	iterator/Guild.php	/^    public function removeMember($position)$/;"	f	class:Guild
 removeObserver	observer/ConcreteObservable.php	/^    public function removeObserver(Observer $observer): void$/;"	f	class:ConcreteObservable	typeref:unknown:void
 removeObserver	observer/Observable.php	/^    public function removeObserver(Observer $observer): void;$/;"	f	interface:Observable	typeref:unknown:void
@@ -268,6 +298,7 @@ reproduce	adapter/Models/DVD.php	/^    public function reproduce(int $number)$/;
 request	.vscode/launch.json	/^            "request": "launch",$/;"	s	object:configurations.0
 request	.vscode/launch.json	/^            "request": "launch",$/;"	s	object:configurations.1
 rinseState	state/Washer.php	/^    private $rinseState;$/;"	v	class:Washer
+sector	composite/models/Restaurant.php	/^    protected $sector;$/;"	v	class:Restaurant
 setClass	iterator/models/GameCharacter.php	/^    public function setClass($class)$/;"	f	class:GameCharacter
 setColor	command/Models/RGBLight.php	/^    public function setColor(string $color): void$/;"	f	class:RGBLight	typeref:unknown:void
 setCommand	command/StreamingController.php	/^    public function setCommand(int $slot, Command $onCommand, Command $offCommand): void$/;"	f	class:StreamingController	typeref:unknown:void
