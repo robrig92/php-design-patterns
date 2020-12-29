@@ -9,20 +9,37 @@ class BrandManager implements ApplicationInterface
 {
     public function execute(): void
     {
-        $brand = new Sector();
-        $gustoff = new Restaurant('Gustoff', 'Francia la calle de París', 'paris');
-        $yukihira = new Restaurant('Yukihira diner place', 'Japón main street', 'japon');
-        $ramenStore = new Restaurant('Ramen store', 'Japón ramen street', 'japon');
+        $brand = $this->getSector();
 
-        $japon = new Sector();
-        $japon->add(new Item($yukihira));
-        $japon->add(new Item($ramenStore));
-        $brand->add($japon);
-
-        $francia = new Sector();
-        $francia->add(new Item($gustoff));
-        $brand->add($francia);
+        $brand->add($this->craftJapanSector());
+        $brand->add($this->craftFranceSector());
 
         $brand->getLocation();
+    }
+
+    protected function getSector()
+    {
+        return new Sector();
+    }
+
+    protected function craftFranceSector()
+    {
+        $france = $this->getSector();
+        $gustoff = new Restaurant('Gustoff', 'The France\'s main street', 'France');
+
+        $france->add(new Item($gustoff));
+        return $france;
+    }
+
+    protected function craftJapanSector()
+    {
+        $japan = $this->getSector();
+        $yukihira = new Restaurant('Yukihira diner place', 'Japan main street', 'Japan');
+        $ramenStore = new Restaurant('Ramen store', 'Japan ramen street', 'Japan');
+
+        $japan->add(new Item($yukihira));
+        $japan->add(new Item($ramenStore));
+
+        return $japan;
     }
 }
