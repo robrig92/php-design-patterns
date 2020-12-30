@@ -25,6 +25,8 @@ ConcreteProduct	decorator/ConcreteProduct.php	/^class ConcreteProduct extends Pr
 Counter	decorator/Counter.php	/^class Counter implements ApplicationInterface$/;"	c
 DVD	adapter/Models/DVD.php	/^class DVD$/;"	c
 DVDAdapter	adapter/Adapters/DVDAdapter.php	/^class DVDAdapter extends CD$/;"	c
+DownloadClient	proxy/DownloadClient.php	/^class DownloadClient implements ApplicationInterface$/;"	c
+Downloader	proxy/Downloader.php	/^interface Downloader$/;"	i
 Duck	strategy/Duck.php	/^abstract class Duck$/;"	c
 DuckSimulator	strategy/DuckSimulator.php	/^class DuckSimulator implements ApplicationInterface$/;"	c
 EmptyState	state/states/EmptyState.php	/^class EmptyState implements StateInterface$/;"	c
@@ -59,12 +61,14 @@ NormalQuack	strategy/NormalQuack.php	/^class NormalQuack implements IQuackBehavi
 Observable	observer/Observable.php	/^interface Observable$/;"	i
 Observer	observer/Observer.php	/^interface Observer$/;"	i
 Product	decorator/Product.php	/^abstract class Product$/;"	c
+Proxy	proxy/Proxy.php	/^class Proxy implements Downloader$/;"	c
 RGBLight	command/Models/RGBLight.php	/^class RGBLight$/;"	c
 RGBLightOffCommand	command/Commands/RGBLightOffCommand.php	/^class RGBLightOffCommand implements Command$/;"	c
 RGBLightOnCommand	command/Commands/RGBLigthOnCommand.php	/^class RGBLightOnCommand implements Command$/;"	c
 Restaurant	composite/models/Restaurant.php	/^class Restaurant$/;"	c
 RinseState	state/states/RinseState.php	/^class RinseState implements StateInterface$/;"	c
 Sector	composite/composites/Sector.php	/^class Sector implements Component$/;"	c
+SimpleDownloader	proxy/SimpleDownloader.php	/^class SimpleDownloader implements Downloader$/;"	c
 SingletongApp	singleton/SingletonApp.php	/^class SingletongApp implements ApplicationInterface$/;"	c
 Squeak	strategy/Squeak.php	/^class Squeak implements IQuackBehavior$/;"	c
 StateInterface	state/states/StateInterface.php	/^interface StateInterface$/;"	i
@@ -101,6 +105,7 @@ __construct	iterator/iterators/CharacterIterator.php	/^    public function __con
 __construct	iterator/iterators/GuildIterator.php	/^    public function __construct(array $elements)$/;"	f	class:GuildIterator
 __construct	iterator/models/GameCharacter.php	/^    public function __construct(string $name, int $level, string $class)$/;"	f	class:GameCharacter
 __construct	observer/ConcreteObserver.php	/^    public function __construct(string $name, ConcreteObservable $observable)$/;"	f	class:ConcreteObserver
+__construct	proxy/Proxy.php	/^    public function __construct(Downloader $downloader)$/;"	f	class:Proxy
 __construct	state/Washer.php	/^    public function __construct()$/;"	f	class:Washer
 __construct	state/states/EmptyState.php	/^    public function __construct($washer)$/;"	f	class:EmptyState
 __construct	state/states/RinseState.php	/^    public function __construct($washer)$/;"	f	class:RinseState
@@ -125,6 +130,7 @@ application	index.php	/^$application = getApplication($program);$/;"	v
 assembly	factory/ToyFactory.php	/^    public function assembly($parts): string$/;"	f	class:ToyFactory	typeref:unknown:string
 buttonOffPressed	command/StreamingController.php	/^    public function buttonOffPressed(int $slot): void$/;"	f	class:StreamingController	typeref:unknown:void
 buttonOnPressed	command/StreamingController.php	/^    public function buttonOnPressed(int $slot): void$/;"	f	class:StreamingController	typeref:unknown:void
+cache	proxy/Proxy.php	/^    protected $cache;$/;"	v	class:Proxy
 changeSector	composite/models/Restaurant.php	/^    public function changeSector($sector)$/;"	f	class:Restaurant
 class	iterator/models/GameCharacter.php	/^    protected $class;$/;"	v	class:GameCharacter
 color	command/Models/RGBLight.php	/^    protected $color;$/;"	v	class:RGBLight
@@ -144,6 +150,10 @@ description	decorator/Product.php	/^    protected $description = "";$/;"	v	class
 display	strategy/Duck.php	/^    public abstract function display(): void;$/;"	f	class:Duck	typeref:unknown:void
 display	strategy/MallardDuck.php	/^    public function display(): void$/;"	f	class:MallardDuck	typeref:unknown:void
 display	strategy/ModelDuck.php	/^    public function display(): void$/;"	f	class:ModelDuck	typeref:unknown:void
+download	proxy/Downloader.php	/^    public function download(string $url);$/;"	f	interface:Downloader
+download	proxy/Proxy.php	/^    public function download(string $url)$/;"	f	class:Proxy
+download	proxy/SimpleDownloader.php	/^    public function download(string $url)$/;"	f	class:SimpleDownloader
+downloader	proxy/Proxy.php	/^    protected $downloader;$/;"	v	class:Proxy
 dropWater	state/Washer.php	/^    public function dropWater()$/;"	f	class:Washer
 dropWater	state/states/EmptyState.php	/^    public function dropWater()$/;"	f	class:EmptyState
 dropWater	state/states/RinseState.php	/^    public function dropWater()$/;"	f	class:RinseState
@@ -172,6 +182,7 @@ execute	decorator/Counter.php	/^    public function execute(): void$/;"	f	class:
 execute	factory/Store.php	/^    public function execute(): void$/;"	f	class:Store	typeref:unknown:void
 execute	iterator/Game.php	/^    public function execute(): void$/;"	f	class:Game	typeref:unknown:void
 execute	observer/Monitor.php	/^    public function execute(): void$/;"	f	class:Monitor	typeref:unknown:void
+execute	proxy/DownloadClient.php	/^    public function execute(): void$/;"	f	class:DownloadClient	typeref:unknown:void
 execute	singleton/SingletonApp.php	/^    public function execute(): void$/;"	f	class:SingletongApp	typeref:unknown:void
 execute	state/WashingStore.php	/^    public function execute(): void$/;"	f	class:WashingStore	typeref:unknown:void
 execute	strategy/DuckSimulator.php	/^    public function execute(): void$/;"	f	class:DuckSimulator	typeref:unknown:void
@@ -277,7 +288,7 @@ price	factory/models/Toy.php	/^    protected $price;$/;"	v	class:Toy
 println	observer/Monitor.php	/^    public function println($message)$/;"	f	class:Monitor
 productFactory	decorator/Counter.php	/^    private function productFactory(string $type): ConcreteProduct$/;"	f	class:Counter	typeref:unknown:ConcreteProduct
 program	.vscode/launch.json	/^            "program": "${file}",$/;"	s	object:configurations.1
-program	index.php	/^$program = 'composite';$/;"	v
+program	index.php	/^$program = 'proxy';$/;"	v
 quack	strategy/IQuackBehavior.php	/^    public function quack(): string;$/;"	f	interface:IQuackBehavior	typeref:unknown:string
 quack	strategy/NoQuack.php	/^    public function quack(): string$/;"	f	class:NoQuack	typeref:unknown:string
 quack	strategy/NormalQuack.php	/^    public function quack(): string$/;"	f	class:NormalQuack	typeref:unknown:string

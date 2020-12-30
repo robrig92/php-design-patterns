@@ -9,6 +9,7 @@ require_once('./observer/Monitor.php');
 require_once('./decorator/Counter.php');
 require_once('./state/WashingStore.php');
 require_once('./ApplicationInterface.php');
+require_once('./proxy/DownloadClient.php');
 require_once('./composite/BrandManager.php');
 require_once('./strategy/DuckSimulator.php');
 require_once('./singleton/SingletonApp.php');
@@ -45,10 +46,14 @@ function getApplication($program): ApplicationInterface
             // No break
         case 'composite':
             return new BrandManager();
+            // No break
+        case 'proxy':
+            return new DownloadClient();
+            // No break
     }
 }
 
-$program = 'composite';
+$program = 'proxy';
 $application = getApplication($program);
 renderln("Running the $program example</br>");
 $application->execute();
