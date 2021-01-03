@@ -2,11 +2,10 @@
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
-!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	0.0.0	/b743975/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
 0	.vscode/launch.json	/^        {$/;"	o	array:configurations
 1	.vscode/launch.json	/^        {$/;"	o	array:configurations
 AlertSubscription	command/Models/AlertSubscription.php	/^class AlertSubscription$/;"	c
@@ -139,6 +138,8 @@ components	composite/composites/Sector.php	/^    protected $components;$/;"	v	cl
 configurations	.vscode/launch.json	/^    "configurations": [$/;"	a
 craft	factory/ToyFactory.php	/^    public function craft(string $type): string$/;"	f	class:ToyFactory	typeref:unknown:string
 craftDragonsOfHeavenGuild	iterator/Game.php	/^    protected function craftDragonsOfHeavenGuild()$/;"	f	class:Game
+craftFranceSector	composite/BrandManager.php	/^    protected function craftFranceSector()$/;"	f	class:BrandManager
+craftJapanSector	composite/BrandManager.php	/^    protected function craftJapanSector()$/;"	f	class:BrandManager
 craftLansGuild	iterator/Game.php	/^    protected function craftLansGuild()$/;"	f	class:Game
 createIterator	iterator/Guild.php	/^    public function createIterator(): IteratorInterface$/;"	f	class:Guild	typeref:unknown:IteratorInterface
 createIterator	iterator/iterators/IterableInterface.php	/^    public function createIterator(): IteratorInterface;$/;"	f	interface:IterableInterface	typeref:unknown:IteratorInterface
@@ -229,6 +230,7 @@ getParts	factory/models/Toy.php	/^    public function getParts(): array$/;"	f	cl
 getPrice	decorator/Product.php	/^    public function getPrice(): float$/;"	f	class:Product	typeref:unknown:float
 getPrice	factory/models/Toy.php	/^    public function getPrice(): float$/;"	f	class:Toy	typeref:unknown:float
 getRinseState	state/Washer.php	/^    public function getRinseState()$/;"	f	class:Washer
+getSector	composite/BrandManager.php	/^    protected function getSector()$/;"	f	class:BrandManager
 getSector	composite/models/Restaurant.php	/^    public function getSector()$/;"	f	class:Restaurant
 getSongs	adapter/Adapters/DVDAdapter.php	/^    public function getSongs()$/;"	f	class:DVDAdapter
 getSongs	adapter/Models/CD.php	/^    public function getSongs()$/;"	f	class:CD

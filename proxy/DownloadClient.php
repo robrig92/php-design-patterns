@@ -2,7 +2,7 @@
 
 require_once(__DIR__ . '/Proxy.php');
 require_once(__DIR__ . '/../utils/Output.php');
-require_once(__DIR__ . '/Simpledownloader.php');
+require_once(__DIR__ . '/SimpleDownloader.php');
 require_once(__DIR__ . '/../ApplicationInterface.php');
 
 class DownloadClient implements ApplicationInterface
